@@ -14,10 +14,10 @@ public class GlobalConstants {
 	//os name
 	//Cloud Testing: Browserstack/ saucelab/ crossbrowserTesting (Access Token / ID)
 	//...
-	public static final String DEV_USER_URL = "https://demo.nopcommerce.com/";
-	public static final String DEV_ADMIN_URL = "https://admin-demo.nopcommerce.com";
 	public static final long SHORT_TIMEOUT = 5;
 	public static final long LONG_TIMEOUT = 30;
+	public static final String DEV_USER_URL = "https://demo.nopcommerce.com/";
+	public static final String DEV_ADMIN_URL = "https://admin-demo.nopcommerce.com";
 	public static final String DEV_ADMIN_USERNAME = "admin@yourstore.com";
 	public static final String DEV_ADMIN_PASSWORD = "admin";
 	public static final String OS_NAME = System.getProperty("user.dir");

@@ -4,52 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/BrowserList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/EnvironmentList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/MethodListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/TestNGAppender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commons/VerificationFailures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DashBoardPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LoginPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/RegisterPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/HomePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/LoginPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/MyAccountPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/RegisterPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/reportConfig/AllureTestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/retryConfig/RetryAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utitlities/DataFaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utitlities/ExcelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utitlities/JDBCConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utitlities/PropertiesConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/env-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/env-staging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/env-testing.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/environment.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testng-1.0.dtd" afterDir="false" />
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="Register">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/GlobalConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/VerificationFailures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/VerificationFailures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/HomePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/HomePageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/LoginPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/LoginPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,25 +54,13 @@
       <recent name="D:\Automation\nopCommerce\src\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Account" />
       <recent name="Login" />
       <recent name="pageUI" />
       <recent name="pageObjects" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="nopCommerce" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="nopCommerce" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="D:/Automation/nopCommerce/src/test/resources/Run.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerce" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/Run.xml" />
@@ -131,6 +86,19 @@
       <option name="presentableId" value="Default" />
       <updated>1709693296841</updated>
     </task>
+    <task id="LOCAL-00001" summary="Register">
+      <option name="closed" value="true" />
+      <created>1710322745683</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710322745684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Register" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register" />
   </component>
 </project>

@@ -11,10 +11,13 @@
     <test name="Run on Chrome" preserve-order="true">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <!--<class
-                    name="Register.Register_01_Main_Flow"/>-->
+            <class
+                    name="Register.Register_01_Main_Flow"/>
             <class
                     name="Register.Register_02_Validation"/>
+            <class
+                    name="Login.Login_01"/>
         </classes>
     </test>
+
 </suite>

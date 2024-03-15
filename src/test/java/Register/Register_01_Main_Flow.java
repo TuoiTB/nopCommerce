@@ -21,10 +21,10 @@ public class Register_01_Main_Flow extends BaseTest {
     RegisterPageObject registerPage;
     LoginPageObject loginPage;
     DashBoardPageObject dashBoardPage;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
+    public static String firstName;
+    public static String lastName;
+    public static String email;
+    public static String password;
     DataFaker dataFaker = new DataFaker();
     @Parameters({"browser", "url"})
     @BeforeClass

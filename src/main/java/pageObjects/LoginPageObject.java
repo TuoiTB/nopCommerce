@@ -31,6 +31,13 @@ public class LoginPageObject extends BasePage {
         sendkeyToElement(driver,LoginPageUI.PASSWORD_TEXTBOX, valueToSend);
     }
 
+    public boolean isEmailErrorMessageDisplayed() {
+        return isElementDisplayed(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+    }
+    public boolean isEmailNotRegisterErrorMessageDisplayed() {
+        return isElementDisplayed(driver, LoginPageUI.EMAIL_NOT_REGISTER_ERROR_MESSAGE);
+    }
+
 
 /*    public DashBoardPageObject loginToSystem(String userNameLogin, String passwordLogin) {
         waitForElementVisible(driver, LoginPageUI.USER_ID_TEXTBOX);

@@ -1,4 +1,4 @@
-package Login;
+package Account;
 
 import Register.Register_01_Main_Flow;
 import commons.BaseTest;
@@ -9,16 +9,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
-import utitlities.DataFaker;
+import pageObjects.HomePageObject;
+import pageObjects.LoginPageObject;
+import pageObjects.PageGeneratorManager;
 
 @Epic("Customer")
 @Feature("Create Customer")
-public class Login_01 extends BaseTest {
+public class Account extends BaseTest {
     private WebDriver driver;
     HomePageObject homePage;
     LoginPageObject loginPage;
-    DataFaker dataFaker = new DataFaker();
 
     @Parameters({"browser", "url"})
     @BeforeClass
@@ -27,6 +27,7 @@ public class Login_01 extends BaseTest {
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToLoginLink();
         loginPage = PageGeneratorManager.getLoginPage(driver);
+
     }
     @Test(priority = 1)
     public void Login_With_Empty_Data() {

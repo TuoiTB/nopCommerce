@@ -19,10 +19,11 @@ public class Register_02_Validation extends BaseTest {
     private WebDriver driver;
     HomePageObject homePage;
     RegisterPageObject registerPage;
-    private String firstName;
+    //Register_01_Main_Flow register01MainFlow = new Register_01_Main_Flow();
+    /*private String firstName;
     private String lastName;
     private String email;
-    private String password;
+    private String password;*/
     DataFaker dataFaker = new DataFaker();
     @Parameters({"browser", "url"})
     @BeforeClass
@@ -31,10 +32,10 @@ public class Register_02_Validation extends BaseTest {
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToRegisterLink();
         registerPage = PageGeneratorManager.getRegisterPage(driver);
-        firstName = dataFaker.getFirstName();
+        /*firstName = dataFaker.getFirstName();
         lastName = dataFaker.getLastName();
         email = dataFaker.getEmailAddress();
-        password = dataFaker.getPassword();
+        password = dataFaker.getPassword();*/
     }
 
     @Test(priority = 0)
@@ -55,19 +56,19 @@ public class Register_02_Validation extends BaseTest {
         registerPage.clickToRegisterLink();
 
         log.info("Step 02: Input to First Name");
-        registerPage.inputToFirstName(firstName);
+        registerPage.inputToFirstName(Register_01_Main_Flow.firstName);
 
         log.info("Step 03: Input to Last Name");
-        registerPage.inputToLastName(lastName);
+        registerPage.inputToLastName(Register_01_Main_Flow.lastName);
 
         log.info("Step 04: Input to Email");
         registerPage.inputToEmail("Tuoi.mail");
 
         log.info("Step 05: Input to Password");
-        registerPage.inputToPassword(password);
+        registerPage.inputToPassword(Register_01_Main_Flow.password);
 
         log.info("Step 06: Input to Confirm Password");
-        registerPage.inputToConfirmPassword(password);
+        registerPage.inputToConfirmPassword(Register_01_Main_Flow.password);
 
         log.info("Step 07: Click to Register button");
         registerPage.clickToRegisterButton();
@@ -81,19 +82,19 @@ public class Register_02_Validation extends BaseTest {
         registerPage.clickToRegisterLink();
 
         log.info("Step 02: Input to First Name");
-        registerPage.inputToFirstName(firstName);
+        registerPage.inputToFirstName(Register_01_Main_Flow.firstName);
 
         log.info("Step 03: Input to Last Name");
-        registerPage.inputToLastName(lastName);
+        registerPage.inputToLastName(Register_01_Main_Flow.lastName);
 
         log.info("Step 04: Input to Email");
-        registerPage.inputToEmail(email);
+        registerPage.inputToEmail(Register_01_Main_Flow.email);
 
         log.info("Step 05: Input to Password");
-        registerPage.inputToPassword(password);
+        registerPage.inputToPassword(Register_01_Main_Flow.password);
 
         log.info("Step 06: Input to Confirm Password");
-        registerPage.inputToConfirmPassword(password);
+        registerPage.inputToConfirmPassword(Register_01_Main_Flow.password);
 
         log.info("Step 07: Click to Register button");
         registerPage.clickToRegisterButton();
@@ -104,19 +105,19 @@ public class Register_02_Validation extends BaseTest {
         registerPage.clickToRegisterLink();
 
         log.info("Step 02: Input to First Name");
-        registerPage.inputToFirstName(firstName);
+        registerPage.inputToFirstName(Register_01_Main_Flow.firstName);
 
         log.info("Step 03: Input to Last Name");
-        registerPage.inputToLastName(lastName);
+        registerPage.inputToLastName(Register_01_Main_Flow.lastName);
 
         log.info("Step 04: Input to Email");
         registerPage.inputToEmail("Tuoitb@mail.com");
 
         log.info("Step 05: Input to Password");
-        registerPage.inputToPassword(password);
+        registerPage.inputToPassword(Register_01_Main_Flow.password);
 
         log.info("Step 06: Input to Confirm Password");
-        registerPage.inputToConfirmPassword(password);
+        registerPage.inputToConfirmPassword(Register_01_Main_Flow.password);
 
         log.info("Step 07: Click to Register button");
         registerPage.clickToRegisterButton();
@@ -130,13 +131,13 @@ public class Register_02_Validation extends BaseTest {
         registerPage.clickToRegisterLink();
 
         log.info("Step 02: Input to First Name");
-        registerPage.inputToFirstName(firstName);
+        registerPage.inputToFirstName(Register_01_Main_Flow.firstName);
 
         log.info("Step 03: Input to Last Name");
-        registerPage.inputToLastName(lastName);
+        registerPage.inputToLastName(Register_01_Main_Flow.lastName);
 
         log.info("Step 04: Input to Email");
-        registerPage.inputToEmail(email);
+        registerPage.inputToEmail(Register_01_Main_Flow.email);
 
         log.info("Step 05: Input to Password");
         registerPage.inputToPassword("1234");
@@ -157,16 +158,16 @@ public class Register_02_Validation extends BaseTest {
         registerPage.clickToRegisterLink();
 
         log.info("Step 02: Input to First Name");
-        registerPage.inputToFirstName(firstName);
+        registerPage.inputToFirstName(Register_01_Main_Flow.firstName);
 
         log.info("Step 03: Input to Last Name");
-        registerPage.inputToLastName(lastName);
+        registerPage.inputToLastName(Register_01_Main_Flow.lastName);
 
         log.info("Step 04: Input to Email");
-        registerPage.inputToEmail(email);
+        registerPage.inputToEmail(Register_01_Main_Flow.email);
 
         log.info("Step 05: Input to Password");
-        registerPage.inputToPassword(password);
+        registerPage.inputToPassword(Register_01_Main_Flow.password);
 
         log.info("Step 06: Input to Confirm Password");
         registerPage.inputToConfirmPassword("1234");
