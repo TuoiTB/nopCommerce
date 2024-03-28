@@ -13,10 +13,12 @@
         <classes>
             <class
                     name="Register.Register_01_Main_Flow"/>
+            <!--<class
+                    name="Register.Register_02_Validation"/>-->
+           <!-- <class
+                    name="Login.Login_01"/>-->
             <class
-                    name="Register.Register_02_Validation"/>
-            <class
-                    name="Login.Login_01"/>
+                    name="Account.Account"/>
         </classes>
     </test>
 

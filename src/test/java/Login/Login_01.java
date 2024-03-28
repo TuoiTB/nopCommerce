@@ -18,7 +18,7 @@ public class Login_01 extends BaseTest {
     private WebDriver driver;
     HomePageObject homePage;
     LoginPageObject loginPage;
-    DataFaker dataFaker = new DataFaker();
+    DashBoardPageObject dashBoardPage;
 
     @Parameters({"browser", "url"})
     @BeforeClass
@@ -76,6 +76,19 @@ public class Login_01 extends BaseTest {
         loginPage.clickToLoginButton();
         log.info("Step 04: Verify error message displayed");
         verifyTrue(loginPage.isEmailNotRegisterErrorMessageDisplayed());
+    }
+    @Test(priority = 6)
+    public void Login_With_Valid_Email_And_Password() {
+        log.info("Step 01: Input to Email");
+        loginPage.refreshCurrentPage(driver);
+        loginPage.inputToEmail(Register_01_Main_Flow.email);
+        log.info("Step 02: Input to Password");
+        loginPage.inputToPassword(Register_01_Main_Flow.password);
+        log.info("Step 03: Click Login Button");
+        loginPage.clickToLoginButton();
+        log.info("Step 04: Verify login successfully");
+        dashBoardPage = PageGeneratorManager.getDashBoardPage(driver);
+        verifyTrue(dashBoardPage.isLoginSuccessfully());
     }
 
     @AfterClass(alwaysRun = true)
