@@ -75,4 +75,27 @@ public class MyAccountPageObject extends BasePage {
     public String getYearText(){
         return getFirstSelectedOptionText(driver, MyAccountPageUI.DOB_YEAR);
     }
+    public void inputToTextboxById(String valueToSend, String id){
+        waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_TEXTBOX_BY_ID, id);
+        sendkeyToElement(driver, MyAccountPageUI.DYNAMIC_TEXTBOX_BY_ID, valueToSend, id);
+    }
+    public void clickToAddressLink(){
+        waitForElementClickable(driver, MyAccountPageUI.ADDRESS_LINK);
+        clickToElement(driver, MyAccountPageUI.ADDRESS_LINK);
+    }
+    public void selectedDropdownById(String itemSelected, String id){
+        waitForElementVisible(driver, MyAccountPageUI.DYNAMIC_DROPDOWN_BY_ID, id);
+        selectDropdown(driver, MyAccountPageUI.DYNAMIC_DROPDOWN_BY_ID, itemSelected, id);
+    }
+    public boolean isInforAddressDisplayed(String dynamicText){
+        return isElementDisplayed(driver, MyAccountPageUI.DYNAMIC_INFOR_ADDRESS_BY_TEXT, dynamicText);
+    }
+    public boolean isSaveSuccessfullyMessageDisplayed(){
+        return isElementDisplayed(driver, MyAccountPageUI.ADD_ADDRESS_SUCCESSFULLY_MESSAGE);
+    }
+
+    public void clickAddnewButton() {
+        waitForElementVisible(driver, MyAccountPageUI.ADD_ADDRESS_BUTTON);
+        clickToElement(driver, MyAccountPageUI.ADD_ADDRESS_BUTTON);
+    }
 }

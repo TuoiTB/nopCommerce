@@ -22,6 +22,22 @@ public class Account extends BaseTest {
     LoginPageObject loginPage;
     DashBoardPageObject dashBoardPage;
     MyAccountPageObject myAccountPage;
+    String firstName = "Automation";
+    String lastName = "FC";
+    String day = "1";
+    String month = "January";
+    String year = "1999";
+    String email = getEmailRandom();
+    String company = "automationfc";
+    String companyCity = "Da Nang";
+    String companyAddress1 = "120/23 Le Lai";
+    String companyAddress2 = "45 Nguyen Dinh Chieu";
+    String zipCode = "550000";
+    String phoneNumber = "0127845932";
+    String faxNumber = "0127845645";
+    String country ="United States";
+    String province ="California";
+
     @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String url) {
@@ -36,17 +52,9 @@ public class Account extends BaseTest {
         dashBoardPage.clickMyAccount();
         myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
     }
+
     @Test(priority = 1)
     public void Customer_information() {
-        String firstName = "Automation";
-        String lastName = "FC";
-        String day = "1";
-        String month = "January";
-        String year = "1999";
-        String email = getEmailRandom();
-        String company = "automationfc";
-
-
 
         log.info("Step 01: Choose gender: female ");
         myAccountPage.chooseGenderRadioButton();
@@ -98,13 +106,70 @@ public class Account extends BaseTest {
 
         log.info("Step 09_08: Verify Year Selected");
         verifyEquals(myAccountPage.getYearText(), year);
-
     }
+
     @Test(priority = 2)
     public void Addresses() {
+        log.info("Step 00: Click to Address link");
+        myAccountPage.clickToAddressLink();
 
+        log.info("Step 01: Click Add new button");
+        myAccountPage.clickAddnewButton();
 
+        log.info("Step 02: Input to First name textbox");
+        myAccountPage.inputToTextboxById(firstName, "Address_FirstName");
+
+        log.info("Step 03: Input to Last name textbox");
+        myAccountPage.inputToTextboxById(lastName, "Address_LastName");
+
+        log.info("Step 04: Input to Email textbox");
+        myAccountPage.inputToTextboxById(email, "Address_Email");
+
+        log.info("Step 05: Input to Company textbox");
+        myAccountPage.inputToTextboxById(company, "Address_Company");
+
+        log.info("Step 06: Input to Company textbox");
+        myAccountPage.inputToTextboxById(companyCity, "Address_Company");
+
+        log.info("Step 07: Input to Address1 textbox");
+        myAccountPage.inputToTextboxById(companyAddress1, "Address_Address1");
+
+        log.info("Step 08: Input to Address2 textbox");
+        myAccountPage.inputToTextboxById(companyAddress2, "Address_Address2");
+
+        log.info("Step 09: Input to ZipPostalCode textbox");
+        myAccountPage.inputToTextboxById(zipCode, "Address_ZipPostalCode");
+
+        log.info("Step 10: Input to PhoneNumber textbox");
+        myAccountPage.inputToTextboxById(phoneNumber, "Address_PhoneNumber");
+
+        log.info("Step 11: Input to FaxNumber textbox");
+        myAccountPage.inputToTextboxById(faxNumber, "Address_FaxNumber");
+
+        log.info("Step 12: Select Country dropdown");
+        myAccountPage.selectedDropdownById(country, "Address_CountryId");
+
+        log.info("Step 13: Select State/ Province dropdown");
+        myAccountPage.selectedDropdownById(province, "Address_StateProvinceId");
+
+        log.info("Step 14: Input to PhoneNumber textbox");
+        myAccountPage.inputToTextboxById(companyCity, "Address_City");
+
+        log.info("Step 15: Click Save button");
+        myAccountPage.clickToSaveButton();
+
+        log.info("Step 16: Verify add successfully message displayed");
+        verifyTrue(myAccountPage.isSaveSuccessfullyMessageDisplayed());
+
+        log.info("Step 17: Verify info address is displayed");
+        verifyTrue(myAccountPage.isInforAddressDisplayed(firstName + " " + lastName));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(email));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(phoneNumber));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(faxNumber));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(companyAddress1));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(companyAddress2));
     }
+
     @Test(priority = 3)
     public void Change_password() {
 
@@ -112,6 +177,6 @@ public class Account extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-    // quitBrowserDriver();
+        // quitBrowserDriver();
     }
 }
