@@ -1,10 +1,8 @@
 package pageObjects;
 
 import commons.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageUI.MyAccountPageUI;
-import pageUI.RegisterPageUI;
 
 public class MyAccountPageObject extends BasePage {
     WebDriver driver;
@@ -97,5 +95,34 @@ public class MyAccountPageObject extends BasePage {
     public void clickAddnewButton() {
         waitForElementVisible(driver, MyAccountPageUI.ADD_ADDRESS_BUTTON);
         clickToElement(driver, MyAccountPageUI.ADD_ADDRESS_BUTTON);
+    }
+    public void clickToChangePasswordLink(){
+        waitForElementClickable(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
+        clickToElement(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
+    }
+    public void clickToChangePasswordButton(){
+        waitForElementClickable(driver, MyAccountPageUI.CHANGE_PASSWORD_BUTTON);
+        clickToElement(driver, MyAccountPageUI.CHANGE_PASSWORD_BUTTON);
+    }
+    public boolean isChangePasswordMessageDisplayed(){
+        return isElementDisplayed(driver, MyAccountPageUI.CHANGE_PASSWOR_SUCCESSFULLY_MSG);
+    }
+    public void clickToCloseButton(){
+        waitForElementClickable(driver, MyAccountPageUI.CLOSE_BUTTON);
+        clickToElement(driver, MyAccountPageUI.CLOSE_BUTTON);
+    }
+    public void clickToLogoutLink(){
+        waitForElementClickable(driver, MyAccountPageUI.LOGOUT_LINK);
+        clickToElement(driver, MyAccountPageUI.LOGOUT_LINK);
+    }
+    public void clickToMyProductReviewLink(){
+        waitForElementClickable(driver, MyAccountPageUI.MY_PRODUCT_REVIEW_LINK);
+        clickToElement(driver, MyAccountPageUI.MY_PRODUCT_REVIEW_LINK);
+    }
+    public boolean isReviewTitleDisplayed(String text){
+        return isElementDisplayed(driver, MyAccountPageUI.DYNAMIC_REVIEW_TITLE, text );
+    }
+    public boolean isReviewTextDisplayed(String text){
+        return isElementDisplayed(driver, MyAccountPageUI.DYNAMIC_REVIEW_TEXT, text );
     }
 }

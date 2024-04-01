@@ -4,10 +4,7 @@ import Register.Register_01_Main_Flow;
 import commons.BaseTest;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.page.Page;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -164,19 +161,96 @@ public class Account extends BaseTest {
         log.info("Step 17: Verify info address is displayed");
         verifyTrue(myAccountPage.isInforAddressDisplayed(firstName + " " + lastName));
         verifyTrue(myAccountPage.isInforAddressDisplayed(email));
-        verifyTrue(myAccountPage.isInforAddressDisplayed(phoneNumber));
-        verifyTrue(myAccountPage.isInforAddressDisplayed(faxNumber));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(" " + phoneNumber));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(" " + faxNumber));
         verifyTrue(myAccountPage.isInforAddressDisplayed(companyAddress1));
         verifyTrue(myAccountPage.isInforAddressDisplayed(companyAddress2));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(companyCity + ", " + province + ", " + zipCode));
+        verifyTrue(myAccountPage.isInforAddressDisplayed(country));
     }
 
     @Test(priority = 3)
     public void Change_password() {
+        String newPassword = "1234567";
+        log.info("Step 00: Click to Change Password link");
+        myAccountPage.clickToChangePasswordLink();
+
+
+
+        log.info("Step 01: Input to New Password");
+        myAccountPage.inputToTextboxById(Register_01_Main_Flow.password,"OldPassword");
+        myAccountPage.inputToTextboxById(newPassword,"NewPassword");
+
+        log.info("Step 01: Input to Confirm New Password");
+        myAccountPage.inputToTextboxById(newPassword,"ConfirmNewPassword");
+
+        log.info("Step 02: Click to Save button");
+        myAccountPage.clickToChangePasswordButton();
+
+        log.info("Step 03: Verify change password message is displayed");
+        verifyTrue(myAccountPage.isChangePasswordMessageDisplayed());
+
+        log.info("Step 04: Click to Close button");
+        myAccountPage.clickToCloseButton();
+
+        log.info("Step 05: Click to Logout link");
+        myAccountPage.clickToLogoutLink();
+        homePage = PageGeneratorManager.getHomePage(driver);
+
+        log.info("Step 06: Verify error login message is displayed");
+        homePage.clickToLoginLink();
+        loginPage = PageGeneratorManager.getLoginPage(driver);
+        loginPage.inputToEmail(Register_01_Main_Flow.email);
+        loginPage.inputToPassword(Register_01_Main_Flow.password);
+        loginPage.clickToLoginButton();
+        verifyTrue(loginPage.isErrorLoginMessageDisplayed());
+
+        log.info("Step 07: Verify login successfully with new password");
+        homePage.clickToLoginLink();
+        loginPage = PageGeneratorManager.getLoginPage(driver);
+        loginPage.inputToEmail(Register_01_Main_Flow.email);
+        loginPage.inputToPassword(newPassword);
+        loginPage.clickToLoginButton();
+        dashBoardPage = PageGeneratorManager.getDashBoardPage(driver);
+        verifyTrue(dashBoardPage.isLoginSuccessfully());
+    }
+
+    @Test(priority = 4)
+    public void My_product_reviews() {
+        String contentOfReview = "Test review";
+        log.info("Step 00: Click to product");
+        dashBoardPage.clickToProduct();
+
+        log.info("Step 01: Click to Add review link");
+        dashBoardPage.clickToAddReviewLink();
+
+        log.info("Step 02: Input to Title review");
+        dashBoardPage.inputToReviewTitleTextbox(contentOfReview);
+
+        log.info("Step 03: Input to Review text");
+        dashBoardPage.inputToReviewTextTextarea(contentOfReview);
+
+        log.info("Step 04: Click to Submit review button");
+        dashBoardPage.clickToSubmitReviewButton();
+
+        log.info("Step 05: Verify add review successfully message is displayed");
+        verifyTrue(dashBoardPage.isAddReviewSuccessfullyMessageDisplayed());
+
+        log.info("Step 06: Click to My account link");
+        dashBoardPage.clickMyAccount();
+
+        log.info("Step 07: Click to My account- my product review");
+        myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
+        myAccountPage.clickToMyProductReviewLink();
+
+        log.info("Step 08: Verify error login message is displayed");
+        verifyTrue(myAccountPage.isReviewTitleDisplayed(contentOfReview));
+        verifyTrue(myAccountPage.isReviewTextDisplayed(contentOfReview));
 
     }
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        // quitBrowserDriver();
+        quitBrowserDriver();
     }
 }
