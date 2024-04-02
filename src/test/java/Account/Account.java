@@ -208,7 +208,7 @@ public class Account extends BaseTest {
         log.info("Step 07: Verify login successfully with new password");
         homePage.clickToLoginLink();
         loginPage = PageGeneratorManager.getLoginPage(driver);
-        loginPage.inputToEmail(Register_01_Main_Flow.email);
+        loginPage.inputToEmail(email);
         loginPage.inputToPassword(newPassword);
         loginPage.clickToLoginButton();
         dashBoardPage = PageGeneratorManager.getDashBoardPage(driver);

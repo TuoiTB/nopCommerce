@@ -17,8 +17,10 @@
                     name="Register.Register_02_Validation"/>-->
            <!-- <class
                     name="Login.Login_01"/>-->
+            <!--<class
+                    name="Account.Account"/>-->
             <class
-                    name="Account.Account"/>
+                    name="Search.Search_AdvancedSearch"/>
         </classes>
     </test>
 

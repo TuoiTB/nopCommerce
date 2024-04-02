@@ -14,7 +14,7 @@ public class MyAccountPageUI {
     public static final String UPDATE_INFO_SUCCESSFULLY_MSG = "XPATH=//p[text()='The customer info has been updated successfully.']";
     public static final String CHANGE_PASSWOR_SUCCESSFULLY_MSG = "XPATH=//p[text()='Password was changed']";
     public static final String CLOSE_BUTTON = "CSS=span.close";
-    public static final String LOGOUT_LINK = "xpath=//a[text()='Log out']";
+    public static final String LOGOUT_LINK = "xpath=//a[text()='Log out']/parent::li";
     public static final String ADDRESS_LINK = "XPATH=//div[@class='side-2']//a[text()='Addresses']";
     public static final String CHANGE_PASSWORD_LINK = "XPATH=//div[@class='side-2']//a[text()='Change password']";
     public static final String ADD_ADDRESS_BUTTON = "XPATH=//button[text()='Add new']";

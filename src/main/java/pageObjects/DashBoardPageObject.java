@@ -41,4 +41,9 @@ public class DashBoardPageObject extends BasePage {
     public boolean isAddReviewSuccessfullyMessageDisplayed(){
         return isElementDisplayed(driver, DashBoardPageUI.ADD_REVIEW_SUCCESSFULLY_MESSAGE);
     }
+
+    public void clickToSearchLinkInFooter() {
+        waitForElementClickable(driver, DashBoardPageUI.SEARCH_LINK_IN_FOOTER);
+        clickToElement(driver, DashBoardPageUI.SEARCH_LINK_IN_FOOTER);
+    }
 }

@@ -1,4 +1,7 @@
 package pageUI;
+
+import org.openqa.selenium.WebElement;
+
 public class DashBoardPageUI {
     public static final String MY_ACCOUNT_LINK = "css=a.ico-account";
     public static final String PRODUCT_LINK = "XPATH=//a[text()='Apple MacBook Pro 13-inch']";
@@ -8,4 +11,5 @@ public class DashBoardPageUI {
     public static final String SUBMIT_REVIEW_BUTTON = "XPATH=//button[text()='Submit review']";
     public static final String ADD_REVIEW_SUCCESSFULLY_MESSAGE = "XPATH=//div[contains(text(),'Product review is successfully added.')]";
 
+    public static final String SEARCH_LINK_IN_FOOTER = "xpath=//div[@class='footer-block customer-service']//a[text()='Search']";
 }

@@ -113,7 +113,7 @@ public class MyAccountPageObject extends BasePage {
     }
     public void clickToLogoutLink(){
         waitForElementClickable(driver, MyAccountPageUI.LOGOUT_LINK);
-        clickToElement(driver, MyAccountPageUI.LOGOUT_LINK);
+        clickToElementByJS(driver, MyAccountPageUI.LOGOUT_LINK);
     }
     public void clickToMyProductReviewLink(){
         waitForElementClickable(driver, MyAccountPageUI.MY_PRODUCT_REVIEW_LINK);
