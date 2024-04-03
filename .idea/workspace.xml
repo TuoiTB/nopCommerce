@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="My Account - Testcase Change password and Add review">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/SearchPageUI.java" afterDir="false" />
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="Done full test case of Search">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DashBoardPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DashBoardPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MyAccountPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LoginPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPageObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/MyAccountPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/MyAccountPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/SearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/SearchPageUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,7 @@
       <recent name="D:\Automation\nopCommerce\src\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Search" />
       <recent name="pageUI" />
       <recent name="pageObjects" />
       <recent name="Account" />
@@ -151,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711965619348</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Done full test case of Search">
+      <option name="closed" value="true" />
+      <created>1712052265180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712052265181</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +178,7 @@
     <MESSAGE value="Testcase My Account" />
     <MESSAGE value="Testcase Addresses" />
     <MESSAGE value="My Account - Testcase Change password and Add review" />
-    <option name="LAST_COMMIT_MESSAGE" value="My Account - Testcase Change password and Add review" />
+    <MESSAGE value="Done full test case of Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done full test case of Search" />
   </component>
 </project>

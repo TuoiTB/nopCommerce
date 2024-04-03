@@ -37,7 +37,11 @@ public class LoginPageObject extends BasePage {
     public boolean isErrorLoginMessageDisplayed() {
         return isElementDisplayed(driver, LoginPageUI.ERROR_LOGIN_MESSAGE);
     }
-
+    public void loginToSystem(String userName, String password){
+        inputToEmail(userName);
+        inputToPassword(password);
+        clickToLoginButton();
+    }
 /*    public DashBoardPageObject loginToSystem(String userNameLogin, String passwordLogin) {
         waitForElementVisible(driver, LoginPageUI.USER_ID_TEXTBOX);
         sendkeyToElement(driver, LoginPageUI.USER_ID_TEXTBOX, userNameLogin);

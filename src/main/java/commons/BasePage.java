@@ -244,8 +244,24 @@ public class BasePage {
 			}
 		}
 	}
-	
-	
+
+	public void selectItemInCustomDropdown_hover(WebDriver driver, String xpathParent, String xpathChild, String expectedText) {
+		hoverToElement(driver, xpathParent);
+		sleepInSecond(2);
+		List<WebElement> allItems = new WebDriverWait(driver, Duration.ofSeconds(longTimeout))
+				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(xpathChild)));
+		for (WebElement tempElement : allItems) {
+
+			if (tempElement.getText().equals(expectedText)) {
+
+				((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);", tempElement);
+				sleepInSecond(5);
+
+				tempElement.click();
+				break;
+			}
+		}
+	}
 	
 	
 	

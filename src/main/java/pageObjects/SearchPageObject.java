@@ -46,6 +46,9 @@ public class SearchPageObject extends BasePage {
     public boolean isProductSearchResultsAbsoluteDisplayed(String searchKey) {
         return getElementText(driver, SearchPageUI.PRODUCT_SEARCH).equals(searchKey);
     }
+    public boolean isProductSearchResultDisplayed() {
+        return isElementDisplayed(driver, SearchPageUI.PRODUCT_ADVANCED_SEARCH);
+    }
 
     public void checkToAdvancedSearchCheckbox() {
         waitForElementClickable(driver, SearchPageUI.ADVANCED_SEARCH_CHECKBOX);

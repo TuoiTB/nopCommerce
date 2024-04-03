@@ -10,4 +10,5 @@ public class SearchPageUI {
     public static final String SUB_CATEGORY_CHECKBOX = "xpath=//label[text()='Automatically search sub categories']//preceding-sibling::input";
     public static final String CATEGORY_DROPDOWN = "xpath=//select[@id='cid']";
     public static final String MANUFACTURER_DROPDOWN = "css=select#mid";
+    public static final String PRODUCT_ADVANCED_SEARCH = "xpath=//h2[@class='product-title']/a";
 }
