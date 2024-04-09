@@ -12,8 +12,7 @@ public class DashBoardPageUI {
     public static final String SEARCH_LINK_IN_FOOTER = "xpath=//div[@class='footer-block customer-service']//a[text()='Search']";
     public static final String COMPUTER_TOP_MENU = "xpath=//ul[@class='top-menu notmobile']/li/a[text()='Computers ']";
     public static final String NOTEBOOK_SUB_FIRST_LEVEL = "xpath=//ul[@class='top-menu notmobile']//ul[@class='sublist first-level']//a";
-    public static final String PRODUCT_NAME = "CSS=.product-title>a";
-    public static final String PRODUCT_PRICE = "css=div.prices>span";
-    public static final String PRODUCT_ORDER_BY_DROPDOWN = "CSS=select#products-orderby" ;
-    public static final String PRODUCT_PAGE_SIZE_DROPDOWN = "CSS=select#products-pagesize" ;
+    public static final String NOTEBOOK = "xpath=//ul[@class='sublist']//a[text()='Notebooks ']";
+
+
 }

@@ -51,96 +51,10 @@ public class DashBoardPageObject extends BasePage {
         clickToElement(driver, DashBoardPageUI.SEARCH_LINK_IN_FOOTER);
     }
 
-    public void openSubmenu(String expectedText) {
-        waitForElementVisible(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
-        selectItemInCustomDropdown_hover(driver, DashBoardPageUI.COMPUTER_TOP_MENU, DashBoardPageUI.NOTEBOOK_SUB_FIRST_LEVEL, expectedText);
+    public void openNotebooks() {
+        waitForElementClickable(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
+        clickToElement(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
+        waitForElementClickable(driver, DashBoardPageUI.NOTEBOOK);
+        clickToElement(driver, DashBoardPageUI.NOTEBOOK);
     }
-    public void sortByPosition(String expectedText){
-        waitForElementVisible(driver, DashBoardPageUI.PRODUCT_ORDER_BY_DROPDOWN);
-        selectDropdown(driver, DashBoardPageUI.PRODUCT_ORDER_BY_DROPDOWN, expectedText);
-    }
-    public boolean isProductNameSortAscending() {
-        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_NAME);
-
-        List<WebElement> productName = getListElement(driver, DashBoardPageUI.PRODUCT_NAME);
-
-        //Lưu tất cả các text trên UI vào list
-        List<String> productNameTextUI = new ArrayList<String>();
-        for (WebElement product : productName) {
-            productNameTextUI.add(product.getText());
-        }
-
-        //Sort Data
-        List<String> productNameTextSort = new ArrayList<String>(productNameTextUI);
-
-        //Collection sort
-        Collections.sort(productNameTextSort);
-
-        return productNameTextUI.equals(productNameTextSort);
-    }
-    public boolean isProductNameSortDescending() {
-        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_NAME);
-
-        List<WebElement> productName = getListElement(driver, DashBoardPageUI.PRODUCT_NAME);
-
-        //Lưu tất cả các text trên UI vào list
-        List<String> productNameTextUI = new ArrayList<String>();
-        for (WebElement product : productName) {
-            productNameTextUI.add(product.getText());
-        }
-
-        //Sort Data
-        List<String> productNameTextSort = new ArrayList<String>(productNameTextUI);
-
-        //Collection sort
-        Collections.sort(productNameTextSort);
-
-        //Reverse data
-        Collections.reverse(productNameTextSort);
-
-        return productNameTextUI.equals(productNameTextSort);
-    }
-    public boolean isProductPriceSortLowToHigh() {
-        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_PRICE);
-
-        List<WebElement> productName = getListElement(driver, DashBoardPageUI.PRODUCT_PRICE);
-
-        //Lưu tất cả các text trên UI vào list
-        List<String> productNameTextUI = new ArrayList<String>();
-        for (WebElement product : productName) {
-            productNameTextUI.add(product.getText());
-        }
-
-        //Sort Data
-        List<String> productNameTextSort = new ArrayList<String>(productNameTextUI);
-
-        //Collection sort
-        Collections.sort(productNameTextSort);
-
-        return productNameTextUI.equals(productNameTextSort);
-    }
-    public boolean isProductPriceSortHighToLow() {
-        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_PRICE);
-
-        List<WebElement> productName = getListElement(driver, DashBoardPageUI.PRODUCT_PRICE);
-
-        //Lưu tất cả các text trên UI vào list
-        List<String> productNameTextUI = new ArrayList<String>();
-        for (WebElement product : productName) {
-            productNameTextUI.add(product.getText());
-        }
-
-        //Sort Data
-        List<String> productNameTextSort = new ArrayList<String>(productNameTextUI);
-
-        //Collection sort
-        Collections.sort(productNameTextSort);
-
-        //Reverse data
-        Collections.reverse(productNameTextSort);
-
-        return productNameTextUI.equals(productNameTextSort);
-    }
-
-
 }

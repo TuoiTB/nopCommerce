@@ -29,64 +29,80 @@ public class Sort_Paging extends BaseTest {
         loginPage = PageGeneratorManager.getLoginPage(driver);
         loginPage.loginToSystem(Register_01_Main_Flow.email, Register_01_Main_Flow.password);
         dashBoardPage = PageGeneratorManager.getDashBoardPage(driver);
-        dashBoardPage.openSubmenu("Notebooks ");
+        dashBoardPage.openNotebooks();
+        searchPage = PageGeneratorManager.getSearchPage(driver);
     }
 
     @Test(priority = 1)
     public void Sort_with_name_A_to_Z() {
         log.info("Step 01: Sort with name A to Z");
-        dashBoardPage.sortByPosition("Name: A to Z");
+        searchPage.sortByPosition("Name: A to Z");
 
         log.info("Step 02: Verify product name is sorted A to Z");
-        verifyTrue(dashBoardPage.isProductNameSortAscending());
+        verifyTrue(searchPage.isProductNameSortAscending());
     }
     @Test(priority = 2)
     public void Sort_with_name_Z_to_A() {
         log.info("Step 01: Sort with name A to Z");
-        dashBoardPage.sortByPosition("Name: Z to A");
-
+        searchPage.sortByPosition("Name: Z to A");
+        searchPage.sleepInSecond(3);
         log.info("Step 02: Verify product name is sorted Z to A");
-        verifyTrue(dashBoardPage.isProductNameSortDescending());
+        verifyTrue(searchPage.isProductNameSortDescending());
     }
     @Test(priority = 3)
     public void Sort_with_price_low_to_high() {
         log.info("Step 01: Sort with name A to Z");
-        dashBoardPage.sortByPosition("Price: Low to High");
-
+        searchPage.sortByPosition("Price: Low to High");
+        searchPage.sleepInSecond(3);
         log.info("Step 02: Verify product price is sorted Low to High");
-        verifyTrue(dashBoardPage.isProductPriceSortLowToHigh());
+        verifyTrue(searchPage.isProductPriceSortLowToHigh());
     }
     @Test(priority = 4)
     public void Sort_with_price_high_to_low() {
         log.info("Step 01: Sort with name A to Z");
-        dashBoardPage.sortByPosition("Price: High to Low");
-
+        searchPage.sortByPosition("Price: High to Low");
+        searchPage.sleepInSecond(3);
         log.info("Step 02: Verify product price is sorted High to Low");
-        verifyTrue(dashBoardPage.isProductPriceSortHighToLow());
+        verifyTrue(searchPage.isProductPriceSortHighToLow());
     }
     @Test(priority = 5)
     public void Displayed_3products_1page() {
-        log.info("Step 01: ");
-        dashBoardPage.;
+        log.info("Step 01: Choose 3 products per page");
+        searchPage.chooseNumberProductInDisplayPerPageByText("3");
+        searchPage.sleepInSecond(3);
+        log.info("Step 02: Verify 3 product in per page");
+        verifyEquals(searchPage.getNumberProduct(), 3);
 
-        log.info("Step 02: Verify ");
-        verifyTrue();
+        log.info("Step 03: Verify next page icon in the first page");
+        verifyTrue(searchPage.isNextPageIconDisplayed());
+
+        log.info("Step 04: Click to next page icon");
+        searchPage.clickToNextPageIcon();
+
+        log.info("Step 05: Verify previous page icon in the second page");
+        verifyTrue(searchPage.isPreviousPageIconDisplayed());
     }
     @Test(priority = 6)
     public void Displayed_6products_1page() {
-        log.info("Step 01: ");
-        dashBoardPage.;
+        log.info("Step 01: Choose 6 products per page");
+        searchPage.chooseNumberProductInDisplayPerPageByText("6");
+        searchPage.sleepInSecond(3);
+        log.info("Step 02: Verify 6 product in per page");
+        verifyEquals(searchPage.getNumberProduct(), 6);
 
-        log.info("Step 02: Verify ");
-        verifyTrue();
+        log.info("Step 03: Verify Paging Not Displayed");
+        verifyTrue(searchPage.isPagingNotDisplayed());
     }
     @Test(priority = 7)
     public void Displayed_9products_1page() {
-        log.info("Step 01: ");
-        dashBoardPage.;
+        log.info("Step 01: Choose 9 products per page");
+        searchPage.chooseNumberProductInDisplayPerPageByText("9");
+        searchPage.sleepInSecond(3);
+        log.info("Step 02: Verify 9 product in per page");
+        verifyTrue(searchPage.isNumberProductLessThan9());
 
-        log.info("Step 02: Verify ");
-        verifyTrue();
+        log.info("Step 03: Verify Paging Not Displayed");
+        verifyTrue(searchPage.isPagingNotDisplayed());
     }
     @AfterClass(alwaysRun = true)
     public void afterClass() {

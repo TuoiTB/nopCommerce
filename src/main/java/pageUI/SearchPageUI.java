@@ -11,4 +11,12 @@ public class SearchPageUI {
     public static final String CATEGORY_DROPDOWN = "xpath=//select[@id='cid']";
     public static final String MANUFACTURER_DROPDOWN = "css=select#mid";
     public static final String PRODUCT_ADVANCED_SEARCH = "xpath=//h2[@class='product-title']/a";
+    public static final String NUMBER_PRODUCT_DROPDOWN = "CSS=select#products-pagesize" ;
+    public static final String ICON_NEXT_PAGE = "CSS=li.next-page" ;
+    public static final String ICON_PREVIOUS_PAGE = "CSS=li.previous-page";
+    public static final String NUMBER_OF_PRODUCT_IN_PER_PAGE = "CSS=h2.product-title";
+    public static final String PAGING = "CSS=div.pager";
+    public static final String PRODUCT_NAME = "CSS=.product-title>a";
+    public static final String PRODUCT_PRICE = "css=div.prices>span";
+    public static final String PRODUCT_ORDER_BY_DROPDOWN = "CSS=select#products-orderby" ;
 }
