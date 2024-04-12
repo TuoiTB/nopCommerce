@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import pageObjects.HomePageObject;
 import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
-import utitlities.DataFaker;
+import utilities.DataFaker;
 
 @Epic("Customer")
 @Feature("Create Customer")

@@ -4,12 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="Done full test case of Search, doing testcase of paging">
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="testcase of Sort_Paging">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ShoppingCartPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/WishlistPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/ShoppingCartPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/WishlistPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DataDrivenTesting/DataProviderFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DataDrivenTesting/ExcelHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DataDrivenTesting/ReadExcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/DataDrivenTesting/Test1214234.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/ExcelConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Register/Register_with_data_driven_testing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Wishlist_Compare_RecentView/Wishlist_Compare_RecentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DashBoardPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DashBoardPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SearchPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/SearchPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/SearchPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utitlities/DataFaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/DataFaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utitlities/ExcelConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utitlities/JDBCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/JDBCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utitlities/PropertiesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/PropertiesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
     </list>
@@ -28,6 +47,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TuoiTB&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="58c3ea74-f3de-43e9-870c-67c8cc76a9fb" />
+        <option name="url" value="https://github.com/TuoiTB/nopCommerce" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HierarchyBrowserManager">
     <option name="SCOPE" value="This Class" />
   </component>
@@ -42,29 +75,33 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Automation/nopCommerce&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Automation/nopCommerce/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Automation/nopCommerce/src/main/java/utilities/DataDrivenTesting",
+    "onboarding.tips.debug.path": "D:/Automation/nopCommerce/src/main/java/org/example/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Automation\nopCommerce\src\main\java\utilities\DataDrivenTesting" />
       <recent name="D:\Automation\nopCommerce" />
       <recent name="D:\Automation\nopCommerce\src\test" />
       <recent name="D:\Automation\nopCommerce\src\main" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Automation\nopCommerce\src\main\java\utilities\DataDrivenTesting" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Search" />
+      <recent name="Register" />
       <recent name="pageUI" />
       <recent name="pageObjects" />
+      <recent name="Search" />
       <recent name="Account" />
-      <recent name="Login" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.D:/Automation/nopCommerce/src/test/resources/Run.xml">
@@ -168,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712137165642</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="testcase of Sort_Paging">
+      <option name="closed" value="true" />
+      <created>1712630470949</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712630470949</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +235,7 @@
     <MESSAGE value="My Account - Testcase Change password and Add review" />
     <MESSAGE value="Done full test case of Search" />
     <MESSAGE value="Done full test case of Search, doing testcase of paging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done full test case of Search, doing testcase of paging" />
+    <MESSAGE value="testcase of Sort_Paging" />
+    <option name="LAST_COMMIT_MESSAGE" value="testcase of Sort_Paging" />
   </component>
 </project>

@@ -10,10 +10,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
 import utilities.DataFaker;
+import utilities.ExcelConfig;
 
 @Epic("Customer")
 @Feature("Create Customer")
-public class Register_01_Main_Flow extends BaseTest {
+public class Register_with_data_driven_testing extends BaseTest {
     private WebDriver driver;
     HomePageObject homePage;
     RegisterPageObject registerPage;
@@ -23,7 +24,7 @@ public class Register_01_Main_Flow extends BaseTest {
     public static String lastName;
     public static String email;
     public static String password;
-    DataFaker dataFaker = new DataFaker();
+    ExcelConfig excelConfig;
     @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String url) {
@@ -31,10 +32,10 @@ public class Register_01_Main_Flow extends BaseTest {
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToRegisterLink();
         registerPage = PageGeneratorManager.getRegisterPage(driver);
-        firstName = dataFaker.getFirstName();
-        lastName = dataFaker.getLastName();
-        email = dataFaker.getEmailAddress();
-        password = dataFaker.getPassword();
+        firstName = excelConfig.getCellData("FirstName",0);
+        lastName = excelConfig.getCellData("LastName",0);
+        email = excelConfig.getCellData("Email",0);
+        password = excelConfig.getCellData("Password",0);
     }
     @Test(priority = 0)
     public void Register_with_all_valid_required_data() {

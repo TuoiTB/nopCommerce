@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pageUI.DashBoardPageUI;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class DashBoardPageObject extends BasePage {
@@ -43,6 +41,7 @@ public class DashBoardPageObject extends BasePage {
         sendkeyToElement(driver, DashBoardPageUI.REVIEW_TEXT_TEXTAREA, valueToSend);
     }
     public boolean isAddReviewSuccessfullyMessageDisplayed(){
+        waitForElementVisible(driver, DashBoardPageUI.ADD_REVIEW_SUCCESSFULLY_MESSAGE);
         return isElementDisplayed(driver, DashBoardPageUI.ADD_REVIEW_SUCCESSFULLY_MESSAGE);
     }
 
@@ -56,5 +55,64 @@ public class DashBoardPageObject extends BasePage {
         clickToElement(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
         waitForElementClickable(driver, DashBoardPageUI.NOTEBOOK);
         clickToElement(driver, DashBoardPageUI.NOTEBOOK);
+    }
+    public void clickToWishlistButton(){
+        waitForElementClickable(driver, DashBoardPageUI.WISHLIST_BUTTON);
+        clickToElement(driver, DashBoardPageUI.WISHLIST_BUTTON);
+    }
+    public void clickToWishlistLink(){
+        waitForElementClickable(driver, DashBoardPageUI.WISHLIST_LINK);
+        clickToElement(driver, DashBoardPageUI.WISHLIST_LINK);
+    }
+    public void clickToCloseButton(){
+        waitForElementClickable(driver, DashBoardPageUI.CLOSE_BUTTON);
+        clickToElement(driver, DashBoardPageUI.CLOSE_BUTTON);
+    }
+    public boolean isAddProductToWishlistSuccessfullyMessageDisplayed(){
+        waitForListElementVisible(driver, DashBoardPageUI.ADD_WISHLIST_SUCCESSFULLY_MESSAGE);
+        return isElementDisplayed(driver, DashBoardPageUI.ADD_WISHLIST_SUCCESSFULLY_MESSAGE);
+    }
+    public boolean isProductDisplayed(){
+        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_LINK);
+        return isElementDisplayed(driver, DashBoardPageUI.PRODUCT_LINK);
+    }
+    public void clickToSharingLink(){
+        waitForElementClickable(driver, DashBoardPageUI.SHARING_LINK);
+        clickToElement(driver, DashBoardPageUI.SHARING_LINK);
+    }
+    public String getTextOfTitleInSharingLink(){
+        waitForElementVisible(driver, DashBoardPageUI.TITLE_IN_SHARING_LINK);
+        return getElementText(driver, DashBoardPageUI.TITLE_IN_SHARING_LINK);
+    }
+    public void checkToAddToCartCheckbox(){
+        waitForElementClickable(driver, DashBoardPageUI.CHECKBOX_ADD_TO_CART);
+        checkToCheckboxOrRadio(driver, DashBoardPageUI.CHECKBOX_ADD_TO_CART);
+    }
+    public void clickToAddToCartButton(){
+        waitForElementClickable(driver, DashBoardPageUI.ADD_TO_CART_BUTTON);
+        checkToCheckboxOrRadio(driver, DashBoardPageUI.ADD_TO_CART_BUTTON);
+    }
+
+    public void clickToHomeImage() {
+        waitForElementClickable(driver, DashBoardPageUI.HOME_IMAGE);
+        clickToElement(driver, DashBoardPageUI.HOME_IMAGE);
+    }
+
+    public void clickToRemoveButton() {
+        waitForElementClickable(driver, DashBoardPageUI.REMOVE_BUTTON);
+        clickToElement(driver, DashBoardPageUI.REMOVE_BUTTON);
+    }
+    public String getTextRemoveMessage() {
+        waitForElementVisible(driver, DashBoardPageUI.REMOVE_MESSAGE);
+        return getElementText(driver, DashBoardPageUI.REMOVE_MESSAGE);
+    }
+    public void clickToAddCompareButton(){
+        List<WebElement> addCompareButton = getListElement(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON);
+        waitForElementClickable(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON);
+        for (WebElement compare: addCompareButton) {
+            if (compare == null) {
+                compare.click();
+            }
+        }
     }
 }

@@ -186,7 +186,6 @@ public class BasePage {
 	}
 	
 	public void clickToElement(WebDriver driver, String locator) {
-		//driver.findElement(By.xpath(locator));
 		getElement(driver, locator).click();
 	}
 	

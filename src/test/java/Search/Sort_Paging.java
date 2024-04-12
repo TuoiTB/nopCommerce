@@ -11,8 +11,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-@Epic("Customer")
-@Feature("Create Customer")
+@Epic("Search")
+@Feature("Sort_Paging")
 public class Sort_Paging extends BaseTest {
     WebDriver driver;
     HomePageObject homePage;

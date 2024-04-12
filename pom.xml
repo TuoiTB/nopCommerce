@@ -26,6 +26,7 @@
         <faker.version>1.0.1</faker.version>
         <log4j.version>2.19.0</log4j.version>
         <reportng.version>1.1.4</reportng.version>
+        <apache.version>5.2.5</apache.version>
     </properties>
     <!--  Quản lí thư viện  -->
     <dependencies>
@@ -118,6 +119,12 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${apache.version}</version>
         </dependency>
     </dependencies>
     <!--  Compiler/ Run Test  -->
