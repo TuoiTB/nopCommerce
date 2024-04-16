@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pageUI.DashBoardPageUI;
 
+import java.time.Duration;
 import java.util.List;
 
 public class DashBoardPageObject extends BasePage {
@@ -23,6 +24,10 @@ public class DashBoardPageObject extends BasePage {
     public void clickToProduct(){
         waitForElementClickable(driver, DashBoardPageUI.PRODUCT_LINK);
         clickToElement(driver, DashBoardPageUI.PRODUCT_LINK);
+    }
+    public void clickToProduct(String nameProduct){
+        waitForElementClickable(driver, DashBoardPageUI.DYNAMIC_PRODUCT_LINK_BY_NAME, nameProduct);
+        clickToElement(driver, DashBoardPageUI.DYNAMIC_PRODUCT_LINK_BY_NAME, nameProduct);
     }
     public void clickToAddReviewLink(){
         waitForElementClickable(driver, DashBoardPageUI.ADD_REVIEW_LINK);
@@ -56,6 +61,12 @@ public class DashBoardPageObject extends BasePage {
         waitForElementClickable(driver, DashBoardPageUI.NOTEBOOK);
         clickToElement(driver, DashBoardPageUI.NOTEBOOK);
     }
+    public void openDesktop() {
+        waitForElementClickable(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
+        clickToElement(driver, DashBoardPageUI.COMPUTER_TOP_MENU);
+        waitForElementClickable(driver, DashBoardPageUI.DESKTOP);
+        clickToElement(driver, DashBoardPageUI.DESKTOP);
+    }
     public void clickToWishlistButton(){
         waitForElementClickable(driver, DashBoardPageUI.WISHLIST_BUTTON);
         clickToElement(driver, DashBoardPageUI.WISHLIST_BUTTON);
@@ -72,13 +83,28 @@ public class DashBoardPageObject extends BasePage {
         waitForListElementVisible(driver, DashBoardPageUI.ADD_WISHLIST_SUCCESSFULLY_MESSAGE);
         return isElementDisplayed(driver, DashBoardPageUI.ADD_WISHLIST_SUCCESSFULLY_MESSAGE);
     }
-    public boolean isProductDisplayed(){
-        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_LINK);
-        return isElementDisplayed(driver, DashBoardPageUI.PRODUCT_LINK);
+    public boolean isProductDisplayedInWishlist(){
+        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_LINK_IN_WISHLIST);
+        return isElementDisplayed(driver, DashBoardPageUI.PRODUCT_LINK_IN_WISHLIST);
+    }
+    public boolean isProductDisplayedInShoppingCart(){
+        waitForListElementVisible(driver, DashBoardPageUI.PRODUCT_LINK_IN_SHOPPING_CART);
+        return isElementDisplayed(driver, DashBoardPageUI.PRODUCT_LINK_IN_SHOPPING_CART);
+    }
+    public boolean isMessageProductEmptyDisplayed(){
+        waitForListElementVisible(driver, DashBoardPageUI.WISHLIST_MESSAGE);
+        return isElementDisplayed(driver, DashBoardPageUI.WISHLIST_MESSAGE);
+    }
+    public boolean isProductUnDisplayed(){
+        return isElementUndisplayed(driver, DashBoardPageUI.PRODUCT_LINK_IN_WISHLIST);
     }
     public void clickToSharingLink(){
         waitForElementClickable(driver, DashBoardPageUI.SHARING_LINK);
         clickToElement(driver, DashBoardPageUI.SHARING_LINK);
+    }
+    public void clickToWishlistInHeader(){
+        waitForElementClickable(driver, DashBoardPageUI.WISHLIST_LINK_IN_HEADER);
+        clickToElement(driver, DashBoardPageUI.WISHLIST_LINK_IN_HEADER);
     }
     public String getTextOfTitleInSharingLink(){
         waitForElementVisible(driver, DashBoardPageUI.TITLE_IN_SHARING_LINK);
@@ -106,13 +132,65 @@ public class DashBoardPageObject extends BasePage {
         waitForElementVisible(driver, DashBoardPageUI.REMOVE_MESSAGE);
         return getElementText(driver, DashBoardPageUI.REMOVE_MESSAGE);
     }
-    public void clickToAddCompareButton(){
-        List<WebElement> addCompareButton = getListElement(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON);
-        waitForElementClickable(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON);
-        for (WebElement compare: addCompareButton) {
-            if (compare == null) {
-                compare.click();
-            }
-        }
+    public void addProductToComparisionByName(String nameProduct){
+        waitForElementClickable(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON_BY_NAME, nameProduct);
+        clickToElement(driver, DashBoardPageUI.ADD_TO_COMPARE_BUTTON_BY_NAME, nameProduct);
+    }
+    public void clickToCompareLink(){
+        waitForElementClickable(driver, DashBoardPageUI.COMPARE_LINK);
+        clickToElement(driver, DashBoardPageUI.COMPARE_LINK);
+    }
+    public boolean isComparisionMessageDisplayed(){
+        waitForElementVisible(driver, DashBoardPageUI.COMPARISON_MESSAGE);
+        return isElementDisplayed(driver, DashBoardPageUI.COMPARISON_MESSAGE);
+    }
+    public boolean isProductInComparisionDisplayedByName(String nameProduct){
+        waitForElementVisible(driver, DashBoardPageUI.PRODUCT_IN_COMPARISION_PAGE_BY_NAME, nameProduct);
+        return isElementDisplayed(driver, DashBoardPageUI.PRODUCT_IN_COMPARISION_PAGE_BY_NAME, nameProduct);
+    }
+    public void clickToClearButton(){
+        waitForElementClickable(driver, DashBoardPageUI.CLEAR_BUTTON);
+        clickToElement(driver, DashBoardPageUI.CLEAR_BUTTON);
+    }
+    public boolean isClearComparisionMessageDisplayed(){
+        waitForElementVisible(driver, DashBoardPageUI.CLEAR_MESSAGE);
+        return isElementDisplayed(driver, DashBoardPageUI.CLEAR_MESSAGE);
+    }
+    public boolean isProductInComparisionUnDisplayedByName(String nameProduct){
+        return isElementUndisplayed(driver, DashBoardPageUI.PRODUCT_IN_COMPARISION_PAGE_BY_NAME, nameProduct);
+    }
+    public void clickToRecentViewProductsLinkInFooter(){
+        waitForElementClickable(driver, DashBoardPageUI.RECENT_VIEW_PRODUCTS_LINK_IN_FOOTER);
+        clickToElement(driver, DashBoardPageUI.RECENT_VIEW_PRODUCTS_LINK_IN_FOOTER);
+    }
+
+    public boolean isProductInRecentViewDisplayedByName(String nameProduct) {
+        waitForElementVisible(driver, DashBoardPageUI.DYNAMIC_PRODUCT_LINK_BY_NAME, nameProduct);
+        return isElementDisplayed(driver, DashBoardPageUI.DYNAMIC_PRODUCT_LINK_BY_NAME, nameProduct);
+    }
+    public void backToPage(){
+        backToPage(driver);
+        isPageLoadedSuccess(driver);
+    }
+
+    public void selectProcessorDropdown() {
+    }
+
+    public void selectRAMDropdown() {
+    }
+
+    public void selectHDDRadioButton() {
+    }
+
+    public void selectOSRadioButton() {
+    }
+
+    public void selectSoftwareCheckbox() {
+    }
+
+    public boolean isMessageAddedToCartDisplayed() {
+    }
+
+    public void clickToShoppingCartLink() {
     }
 }
