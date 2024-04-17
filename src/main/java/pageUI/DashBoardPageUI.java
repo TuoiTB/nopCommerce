@@ -40,7 +40,15 @@ public class DashBoardPageUI {
     public static final String CLEAR_MESSAGE = "XPATH=//div[text()='You have no items to compare.']";
     public static final String RECENT_VIEW_PRODUCTS_LINK_IN_FOOTER = "XPATH=//a[text()='Recently viewed products']";
     public static final String DYNAMIC_ADD_TO_CART_BUTTON_BY_NAME = "XPATH=//a[text()='%s']/parent::h2/following-sibling::div[@class='add-info']//button[text()='Add to cart']";
+    public static final String PROCESSOR = "XPATH=//select[@id='product_attribute_1']";
+    public static final String RAM = "XPATH=//select[@id='product_attribute_2']";
 
 
-
+    public static final String DYNAMIC_HDD_CHECKBOX_BY_TEXT = "XPATH=//label[text()='%s']/preceding-sibling::input";
+    public static final String PRICE = "XPATH=//span[@id='price-value-1']";
+    public static final String DYNAMIC_COST_BY_TEXT = "XPATH=//a[text()='%s']/parent::h2/following-sibling::div[@class='add-info']//span";
+    public static final String ADD_TO_CART_MESSAGE = "xpath=//p[text()='The product has been added to your ']";
+    public static final String SHOPPING_CART_LINK = "xpath=//a[text()='shopping cart']";
+    public static final String QUANTITY = "css=input#product_enteredQuantity_1";
+    public static final String UPDATE_BUTTON = "XPATH=//button[text()='Update']";
 }

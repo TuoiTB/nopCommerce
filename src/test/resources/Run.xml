@@ -26,7 +26,7 @@
             <class
                     name="Search.Sort_Paging"/>-->
             <class
-                    name="Wishlist_Compare_RecentView.Wishlist_Compare_RecentView"/>
+                    name="Order.Order"/>
         </classes>
     </test>
 

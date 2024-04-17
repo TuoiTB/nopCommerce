@@ -2,11 +2,7 @@ package pageObjects;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import pageUI.DashBoardPageUI;
-
-import java.time.Duration;
-import java.util.List;
 
 public class DashBoardPageObject extends BasePage {
     WebDriver driver;
@@ -116,7 +112,7 @@ public class DashBoardPageObject extends BasePage {
     }
     public void clickToAddToCartButton(){
         waitForElementClickable(driver, DashBoardPageUI.ADD_TO_CART_BUTTON);
-        checkToCheckboxOrRadio(driver, DashBoardPageUI.ADD_TO_CART_BUTTON);
+        clickToElement(driver, DashBoardPageUI.ADD_TO_CART_BUTTON);
     }
 
     public void clickToHomeImage() {
@@ -173,24 +169,59 @@ public class DashBoardPageObject extends BasePage {
         isPageLoadedSuccess(driver);
     }
 
-    public void selectProcessorDropdown() {
+    public void selectProcessorDropdown(String itemText) {
+        waitForElementVisible(driver, DashBoardPageUI.PROCESSOR);
+        selectDropdown(driver, DashBoardPageUI.PROCESSOR, itemText);
     }
 
-    public void selectRAMDropdown() {
+    public void selectRAMDropdown(String itemText) {
+        waitForElementVisible(driver, DashBoardPageUI.RAM);
+        selectDropdown(driver, DashBoardPageUI.RAM, itemText);
     }
 
-    public void selectHDDRadioButton() {
+    public void selectRadioButtonAndCheckbox(String dynamicText) {
+        waitForElementVisible(driver, DashBoardPageUI.DYNAMIC_HDD_CHECKBOX_BY_TEXT, dynamicText);
+        checkToCheckboxOrRadio(driver, DashBoardPageUI.DYNAMIC_HDD_CHECKBOX_BY_TEXT, dynamicText);
     }
-
-    public void selectOSRadioButton() {
-    }
-
-    public void selectSoftwareCheckbox() {
-    }
-
     public boolean isMessageAddedToCartDisplayed() {
+        waitForElementVisible(driver, DashBoardPageUI.ADD_TO_CART_MESSAGE);
+        return isElementDisplayed(driver, DashBoardPageUI.ADD_TO_CART_MESSAGE);
     }
 
     public void clickToShoppingCartLink() {
+        waitForElementClickable(driver, DashBoardPageUI.SHOPPING_CART_LINK);
+        clickToElement(driver, DashBoardPageUI.SHOPPING_CART_LINK);
+    }
+
+    public void inputToQuantity(String quantity) {
+        waitForElementVisible(driver, DashBoardPageUI.QUANTITY);
+        sendkeyToElement(driver, DashBoardPageUI.QUANTITY, quantity);
+    }
+    public float bonusWithIndex(String itemText){
+        if (itemText.contains("$")) {
+            int startIndex = itemText.indexOf("$");
+            int endIndex = itemText.indexOf("]");
+            String bonus = itemText.substring(startIndex + 1, endIndex);
+            return Float.parseFloat(bonus.replace(",", ""));
+        }
+        else {
+            return 0;
+        }
+    }
+    public float priceOfProduct(){
+        waitForElementVisible(driver, DashBoardPageUI.PRICE);
+        String priceOfProductText = getElementText(driver, DashBoardPageUI.PRICE);
+        String price = priceOfProductText.substring(priceOfProductText.indexOf("$")+1);
+        return Float.parseFloat(price.replace(",", ""));
+    }
+    public float costOfProduct(String nameProduct){
+        waitForElementVisible(driver, DashBoardPageUI.DYNAMIC_COST_BY_TEXT, nameProduct);
+        String costOfProductText = getElementText(driver, DashBoardPageUI.DYNAMIC_COST_BY_TEXT, nameProduct);
+        String cost = costOfProductText.substring(costOfProductText.indexOf("$")+1);
+        return Float.parseFloat(cost.replace(",", ""));
+    }
+    public void clickToUpdateButton(){
+        waitForElementClickable(driver, DashBoardPageUI.UPDATE_BUTTON);
+        clickToElement(driver, DashBoardPageUI.UPDATE_BUTTON);
     }
 }
