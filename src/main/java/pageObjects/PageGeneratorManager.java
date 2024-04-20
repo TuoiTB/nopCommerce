@@ -27,4 +27,7 @@ public class PageGeneratorManager {
     public static ShoppingCartPageObject getShoppingCart(WebDriver driver) {
         return  new ShoppingCartPageObject(driver);
     }
+    public static CheckOutPageObject getCheckOutPage(WebDriver driver) {
+        return  new CheckOutPageObject(driver);
+    }
 }

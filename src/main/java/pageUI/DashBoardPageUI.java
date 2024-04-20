@@ -45,7 +45,7 @@ public class DashBoardPageUI {
 
 
     public static final String DYNAMIC_HDD_CHECKBOX_BY_TEXT = "XPATH=//label[text()='%s']/preceding-sibling::input";
-    public static final String PRICE = "XPATH=//span[@id='price-value-1']";
+    public static final String PRICE = "css=div.product-price span";
     public static final String DYNAMIC_COST_BY_TEXT = "XPATH=//a[text()='%s']/parent::h2/following-sibling::div[@class='add-info']//span";
     public static final String ADD_TO_CART_MESSAGE = "xpath=//p[text()='The product has been added to your ']";
     public static final String SHOPPING_CART_LINK = "xpath=//a[text()='shopping cart']";

@@ -47,4 +47,32 @@ public class ShoppingCartPageObject extends BasePage {
         waitForElementClickable(driver, ShoppingCartPageUI.EDIT_LINK);
         clickToElement(driver, ShoppingCartPageUI.EDIT_LINK);
     }
+
+    public void clickToRemoveButton() {
+        waitForElementClickable(driver, ShoppingCartPageUI.REMOVE_BUTTON);
+        clickToElement(driver, ShoppingCartPageUI.REMOVE_BUTTON);
+    }
+
+    public void clickToUpdateShoppingCartButton() {
+        waitForElementClickable(driver, ShoppingCartPageUI.UPDATE_CART_BUTTON);
+        clickToElement(driver, ShoppingCartPageUI.UPDATE_CART_BUTTON);
+    }
+
+    public boolean isMessageEmptyDisplayed() {
+        waitForElementVisible(driver, ShoppingCartPageUI.EMPTY_MESSAGE);
+        return isElementDisplayed(driver, ShoppingCartPageUI.EMPTY_MESSAGE);
+    }
+
+    public boolean isProductUndisplayedInShoppingCart() {
+        return isElementUndisplayed(driver, ShoppingCartPageUI.DYNAMIC_NAME_PRODUCT_BY_TEXT);
+    }
+    public void clickToCheckoutButton(){
+        waitForElementClickable(driver, ShoppingCartPageUI.CHECKOUT_BUTTON);
+        clickToElement(driver, ShoppingCartPageUI.CHECKOUT_BUTTON);
+    }
+
+    public void checkToTermsOfService() {
+        waitForElementClickable(driver, ShoppingCartPageUI.TERM_OF_SERVICE_CHECK_BOX);
+        checkToCheckboxOrRadio(driver, ShoppingCartPageUI.TERM_OF_SERVICE_CHECK_BOX);
+    }
 }

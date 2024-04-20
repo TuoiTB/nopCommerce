@@ -5,7 +5,6 @@ import commons.BaseTest;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -20,6 +19,7 @@ public class Order extends BaseTest {
     LoginPageObject loginPage;
     DashBoardPageObject dashBoardPage;
     ShoppingCartPageObject shoppingCartPage;
+    CheckOutPageObject checkOutPage;
     String product;
     String processor, ram, hdd, os, software, quantity;
     float priceOfProduct, bonusOfProcessor, bonusOfRam, bonusOfHdd, bonusOfOs, bonusOfSoftware, totalBonus, totalUnitPrice, subTotal, cost;
@@ -254,18 +254,113 @@ public class Order extends BaseTest {
     }
     @Test(priority = 3)
     public void Remove_from_cart() {
-        log.info("Step 01: ");
+        log.info("Step 01: Click to Remove button");
+        shoppingCartPage.clickToRemoveButton();
+
+       /* log.info("Step 02: Click to Update shoppping cart button");
+        shoppingCartPage.clickToUpdateShoppingCartButton();*/
+
+        log.info("Step 03: Verify message 'Your shopping cart empty' is displayed");
+        verifyTrue(shoppingCartPage.isMessageEmptyDisplayed());
+
+        log.info("Step 04: Verify product is undisplayed in shopping cart");
+        verifyTrue(shoppingCartPage.isProductUndisplayedInShoppingCart());
 
     }
     @Test(priority = 4)
     public void Update_shopping_cart() {
-        log.info("Step 00: Add product in cart");
+        product = "Lenovo IdeaCentre 600 All-in-One PC";
+        quantity = "5";
 
-        log.info("Step 01: Update quantity = 5");
+        log.info("Step 01: Add product in cart with quantity = 5");
+        dashBoardPage = PageGeneratorManager.getDashBoardPage(driver);
+        dashBoardPage.clickToHomeImage();
+        dashBoardPage.openDesktop();
+        dashBoardPage.clickToProduct(product);
 
-        log.info("Step 02: Click update shopping cart button");
+        priceOfProduct = dashBoardPage.priceOfProduct();
+        System.out.println(priceOfProduct);
+
+        totalUnitPrice = priceOfProduct*Float.parseFloat(quantity);
+        System.out.println(totalUnitPrice);
+
+        dashBoardPage.inputToQuantity(quantity);
+        dashBoardPage.clickToAddToCartButton();
+
+        log.info("Step 02: Verify message add successfully is displayed");
+        verifyTrue(dashBoardPage.isMessageAddedToCartDisplayed());
+
+        log.info("Step 03: Click to shopping cart link");
+        dashBoardPage.clickToShoppingCartLink();
+        shoppingCartPage = PageGeneratorManager.getShoppingCart(driver);
 
         log.info("Step 03: Verify total = $2,500.00 ");
+        verifyEquals(shoppingCartPage.unitPriceInShoppingCart(product), priceOfProduct);
+        verifyEquals(shoppingCartPage.quantityInShoppingCart("value",product), quantity);
+        verifyEquals(shoppingCartPage.SubTotalInShoppingCart(product), totalUnitPrice);
+    }
+
+    @Test(priority = 5)
+    public void Check_out_by_method_Cheque() {
+        log.info("Step 01: Check to terms of service checkbox");
+        shoppingCartPage.checkToTermsOfService();
+
+        log.info("Step 02: Click to checkout button");
+        shoppingCartPage.clickToCheckoutButton();
+        checkOutPage = PageGeneratorManager.getCheckOutPage(driver);
+
+        log.info("Step 03: Click to billing continue button");
+        checkOutPage.clickToBillingContinueButton();
+
+        log.info("Step 04: Click to shipping continue button");
+        checkOutPage.clickToShippingContinueButton();
+
+        log.info("Step 05: Click to payment method continue button");
+        checkOutPage.clickToPaymentMethodContinueButton();
+
+        log.info("Step 06: Verify payment information is displayed");
+
+
+        log.info("Step 07: Click to payment information continue button");
+        checkOutPage.clickToPaymentInformationContinueButton();
+
+
+        log.info("Step 08: Verify order information");
+        log.info("Step 8.1: Verify billing address");
+        log.info("Step 8.2: Verify payment");
+        log.info("Step 8.3: Verify shipping address");
+        log.info("Step 8.4: Verify shipping");
+        log.info("Step 8.5: Verify SKU");
+        log.info("Step 8.6: Verify name product");
+        log.info("Step 8.7: Verify price");
+        log.info("Step 8.8: Verify quantity");
+        log.info("Step 8.9: Verify total");
+        log.info("Step 8.10: Verify gift wrapping");
+        log.info("Step 8.11: Verify sub total");
+        log.info("Step 8.12: Verify shipping");
+        log.info("Step 8.13: Verify tax");
+        log.info("Step 8.14: Verify total");
+
+        log.info("Step 09: Click to confirm order button");
+        log.info("Step 10: Verify success message and Order number is displayed");
+        log.info("Step 11: Click to Continue button");
+        log.info("Step 12: Click to My Account link in header");
+        log.info("Step 13: Click to Order");
+        log.info("Step 14: Verify information is displayed");
+        log.info("Step 14.1: Verify order number");
+
+        log.info("Step 14.2: Verify detail");
+
+
+        log.info("Step 11: Click to Continue button");
+        log.info("Step 11: Click to Continue button");
+        log.info("Step 11: Click to Continue button");
+        log.info("Step 11: Click to Continue button");
+        log.info("Step 11: Click to Continue button");
+
+
+
+
 
     }
     @AfterClass(alwaysRun = true)
