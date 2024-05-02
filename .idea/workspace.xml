@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="17/4/2024">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CheckOutPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" afterDir="false" />
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="progress testcase 05 of order class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PageGeneratorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ShoppingCartPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ShoppingCartPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/DashBoardPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/ShoppingCartPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/ShoppingCartPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CheckOutPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CheckOutPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,10 @@
   </component>
   <component name="HierarchyBrowserManager">
     <option name="SCOPE" value="This Class" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/Order/Order.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -220,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713347960163</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="progress testcase 05 of order class">
+      <option name="closed" value="true" />
+      <created>1713586659823</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713586659823</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +253,7 @@
     <MESSAGE value="testcase of wishlist" />
     <MESSAGE value="16/4/2024" />
     <MESSAGE value="17/4/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="17/4/2024" />
+    <MESSAGE value="progress testcase 05 of order class" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress testcase 05 of order class" />
   </component>
 </project>

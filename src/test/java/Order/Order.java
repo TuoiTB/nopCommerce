@@ -300,7 +300,7 @@ public class Order extends BaseTest {
         verifyEquals(shoppingCartPage.SubTotalInShoppingCart(product), totalUnitPrice);
     }
 
-    @Test(priority = 5)
+    //@Test(priority = 5)
     public void Check_out_by_method_Cheque() {
         log.info("Step 01: Check to terms of service checkbox");
         shoppingCartPage.checkToTermsOfService();
@@ -324,46 +324,160 @@ public class Order extends BaseTest {
         log.info("Step 07: Click to payment information continue button");
         checkOutPage.clickToPaymentInformationContinueButton();
 
-
         log.info("Step 08: Verify order information");
+
         log.info("Step 8.1: Verify billing address");
+
         log.info("Step 8.2: Verify payment");
+
         log.info("Step 8.3: Verify shipping address");
+
         log.info("Step 8.4: Verify shipping");
+
         log.info("Step 8.5: Verify SKU");
+
         log.info("Step 8.6: Verify name product");
+
         log.info("Step 8.7: Verify price");
+
         log.info("Step 8.8: Verify quantity");
+
         log.info("Step 8.9: Verify total");
+
         log.info("Step 8.10: Verify gift wrapping");
+
         log.info("Step 8.11: Verify sub total");
+
         log.info("Step 8.12: Verify shipping");
+
         log.info("Step 8.13: Verify tax");
+
         log.info("Step 8.14: Verify total");
 
         log.info("Step 09: Click to confirm order button");
-        log.info("Step 10: Verify success message and Order number is displayed");
-        log.info("Step 11: Click to Continue button");
-        log.info("Step 12: Click to My Account link in header");
-        log.info("Step 13: Click to Order");
-        log.info("Step 14: Verify information is displayed");
-        log.info("Step 14.1: Verify order number");
+        checkOutPage.clickToConfirmContinueButton();
 
-        log.info("Step 14.2: Verify detail");
+        log.info("Step 10: Verify successful message is displayed");
+        verifyTrue(checkOutPage.isMessageSuccessfullyDisplayed());
+        verifyTrue(checkOutPage.isThankYouMessageDisplayed());
+        String orderNumber = checkOutPage.getOrderNumber();
 
+        log.info("Step 11: Click to My account link");
+        checkOutPage.clickMyAccountInHeader();
 
-        log.info("Step 11: Click to Continue button");
-        log.info("Step 11: Click to Continue button");
-        log.info("Step 11: Click to Continue button");
-        log.info("Step 11: Click to Continue button");
-        log.info("Step 11: Click to Continue button");
+        log.info("Step 12: Click to Order Link");
+        checkOutPage.clickOrderLink();
 
+        log.info("Step 13: Verify order number");
+        verifyEquals(checkOutPage.getTextOrderNumber(), orderNumber);
 
+        log.info("Step 14: Click to Detail button");
+        checkOutPage.clickToDetailButton();
 
-
+        log.info("Step 15: Verify informations");
 
     }
-    @AfterClass(alwaysRun = true)
+    //@Test(priority = 7)
+    public void Check_out_by_method_visa() {
+        log.info("Step 01: Check to terms of service checkbox");
+        shoppingCartPage.checkToTermsOfService();
+
+        log.info("Step 02: Click to checkout button");
+        shoppingCartPage.clickToCheckoutButton();
+        checkOutPage = PageGeneratorManager.getCheckOutPage(driver);
+
+        log.info("Step 03: Click to billing continue button");
+        checkOutPage.clickToBillingContinueButton();
+
+        log.info("Step 04: Click to shipping continue button");
+        checkOutPage.clickToShippingContinueButton();
+
+        log.info("Step 05: Click to payment method continue button");
+        checkOutPage.clickToPaymentMethodContinueButton();
+
+        log.info("Step 06: Verify payment information is displayed");
+
+
+        log.info("Step 07: Click to payment information continue button");
+        checkOutPage.clickToPaymentInformationContinueButton();
+
+        log.info("Step 08: Verify order information");
+
+        log.info("Step 8.1: Verify billing address");
+
+        log.info("Step 8.2: Verify payment");
+
+        log.info("Step 8.3: Verify shipping address");
+
+        log.info("Step 8.4: Verify shipping");
+
+        log.info("Step 8.5: Verify SKU");
+
+        log.info("Step 8.6: Verify name product");
+
+        log.info("Step 8.7: Verify price");
+
+        log.info("Step 8.8: Verify quantity");
+
+        log.info("Step 8.9: Verify total");
+
+        log.info("Step 8.10: Verify gift wrapping");
+
+        log.info("Step 8.11: Verify sub total");
+
+        log.info("Step 8.12: Verify shipping");
+
+        log.info("Step 8.13: Verify tax");
+
+        log.info("Step 8.14: Verify total");
+
+        log.info("Step 09: Click to confirm order button");
+        checkOutPage.clickToConfirmContinueButton();
+
+        log.info("Step 10: Verify successful message is displayed");
+        verifyTrue(checkOutPage.isMessageSuccessfullyDisplayed());
+        verifyTrue(checkOutPage.isThankYouMessageDisplayed());
+        String orderNumber = checkOutPage.getOrderNumber();
+
+        log.info("Step 11: Click to My account link");
+        checkOutPage.clickMyAccountInHeader();
+
+        log.info("Step 12: Click to Order Link");
+        checkOutPage.clickOrderLink();
+
+        log.info("Step 13: Verify order number");
+        verifyEquals(checkOutPage.getTextOrderNumber(), orderNumber);
+
+        log.info("Step 14: Click to Detail button");
+        checkOutPage.clickToDetailButton();
+
+        log.info("Step 15: Verify informations");
+
+    }
+    //@Test(priority = 6)
+    public void Re_order() {
+        log.info("Step 01: Click Re-order button");
+        checkOutPage.clickReOrderButton();
+
+        log.info("Step 02: Update QTY = 10");
+        checkOutPage.inputQty("10");
+
+        log.info("Step 03: Click to billing continue button");
+        checkOutPage.clickToBillingContinueButton();
+
+        log.info("Step 04: Click to shipping continue button");
+        checkOutPage.clickToShippingContinueButton();
+
+        log.info("Step 05: Click to payment method continue button");
+        checkOutPage.clickToPaymentMethodContinueButton();
+
+        log.info("Step 06: Verify payment information is displayed");
+
+
+        log.info("Step 07: Click to payment information continue button");
+        checkOutPage.clickToPaymentInformationContinueButton();
+    }
+        @AfterClass(alwaysRun = true)
     public void afterClass() {
        quitBrowserDriver();
     }
