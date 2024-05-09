@@ -25,10 +25,10 @@ public class Register_02_Validation extends BaseTest {
     private String email;
     private String password;*/
     DataFaker dataFaker = new DataFaker();
-    @Parameters({"browser", "url"})
+    @Parameters({"browser", "server"})
     @BeforeClass
-    public void beforeClass(String browserName, String url) {
-        driver = getBrowserDriver(browserName, url);
+    public void beforeClass(String browserName, String serverName) {
+        driver = getBrowserEnvironment(browserName, serverName);
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToRegisterLink();
         registerPage = PageGeneratorManager.getRegisterPage(driver);

@@ -19,10 +19,10 @@ public class Wishlist_Compare_RecentView extends BaseTest {
     LoginPageObject loginPage;
     DashBoardPageObject dashBoardPage;
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser", "server"})
     @BeforeClass
-    public void beforeClass(String browserName, String url) {
-        driver = getBrowserDriver(browserName, url);
+    public void beforeClass(String browserName, String serverName) {
+        driver = getBrowserEnvironment(browserName, serverName);
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToLoginLink();
         loginPage = PageGeneratorManager.getLoginPage(driver);

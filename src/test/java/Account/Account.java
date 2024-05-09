@@ -35,10 +35,10 @@ public class Account extends BaseTest {
     String country ="United States";
     String province ="California";
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser", "server"})
     @BeforeClass
-    public void beforeClass(String browserName, String url) {
-        driver = getBrowserDriver(browserName, url);
+    public void beforeClass(String browserName, String serverName) {
+        driver = getBrowserEnvironment(browserName, serverName);
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToLoginLink();
         loginPage = PageGeneratorManager.getLoginPage(driver);

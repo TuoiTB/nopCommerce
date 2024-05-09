@@ -7,10 +7,13 @@ import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
@@ -35,37 +38,52 @@ public class BaseTest {
     }
 
 
-    protected WebDriver getBrowserDriver(String browserName, String url) {
-        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-        switch (browserList) {
-
+    protected WebDriver getBrowserEnvironment(String browserName, String serverName) {
+        BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browser) {
             case CHROME:
-                //System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
                 driver = new ChromeDriver();
-
-                //version 5.x
-                //Tự tải chromedriver tương ứng với chrome browser, sau đó khởi tạo driver lên
-                //driver = WebDriverManager.chromedriver().create();
                 break;
-
             case FIREFOX:
-                //driver = WebDriverManager.firefoxdriver().create();
                 driver = new FirefoxDriver();
                 break;
-
             case EDGE:
-                //driver = WebDriverManager.edgedriver().create();
                 driver = new EdgeDriver();
                 break;
-
+            case SAFARI:
+                driver = new SafariDriver();
+                break;
             default:
                 throw new RuntimeException("Browser name is not valid");
         }
 
-        driver.get(url);
-        driver.manage().window().maximize();
+        driver.manage().window().setPosition(new Point(0,0));
+        driver.manage().window().setSize(new Dimension(1920,1080));
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+
+        driver.get(getUrlByServerName(serverName));
         return driver;
+    }
+    private String getUrlByServerName(String serverName){
+        ServerList server = ServerList.valueOf(serverName.toUpperCase());
+        switch (server) {
+            case DEV:
+                serverName = "https://www.lazada.vn/";
+                break;
+            case TEST:
+                serverName = "https://demo.nopcommerce.com/";
+                break;
+            case STAGING:
+                serverName = "https://tiki.vn/";
+                break;
+            case LIVE:
+                serverName = "https://shopee.vn/";
+                break;
+            default:
+                throw new IllegalArgumentException("Unexpected value: " + serverName);
+        }
+        return serverName;
     }
 
 

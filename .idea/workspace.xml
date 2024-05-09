@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="progress testcase 05 of order class">
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="02052024">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CheckOutPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CheckOutPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commons/EnvironmentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/ServerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Order/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_with_data_driven_testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_with_data_driven_testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Wishlist_Compare_RecentView/Wishlist_Compare_RecentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Wishlist_Compare_RecentView/Wishlist_Compare_RecentView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713586659823</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="02052024">
+      <option name="closed" value="true" />
+      <created>1714644019751</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714644019751</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +271,7 @@
     <MESSAGE value="16/4/2024" />
     <MESSAGE value="17/4/2024" />
     <MESSAGE value="progress testcase 05 of order class" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress testcase 05 of order class" />
+    <MESSAGE value="02052024" />
+    <option name="LAST_COMMIT_MESSAGE" value="02052024" />
   </component>
 </project>

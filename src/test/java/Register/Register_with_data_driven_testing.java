@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
-import utilities.DataFaker;
 import utilities.ExcelConfig;
 
 @Epic("Customer")
@@ -25,10 +24,10 @@ public class Register_with_data_driven_testing extends BaseTest {
     public static String email;
     public static String password;
     ExcelConfig excelConfig;
-    @Parameters({"browser", "url"})
+    @Parameters({"browser", "server"})
     @BeforeClass
-    public void beforeClass(String browserName, String url) {
-        driver = getBrowserDriver(browserName, url);
+    public void beforeClass(String browserName, String serverName) {
+        driver = getBrowserEnvironment(browserName, serverName);
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.clickToRegisterLink();
         registerPage = PageGeneratorManager.getRegisterPage(driver);
