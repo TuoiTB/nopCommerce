@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="02052024">
+    <list default="true" id="27f91619-ab08-4ef3-9d96-ae4eaca5f78a" name="Changes" comment="refactor code to customize handling multiple server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commons/EnvironmentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commons/ServerList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Login/Login_01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_01_Main_Flow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_02_Validation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Register/Register_with_data_driven_testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Register/Register_with_data_driven_testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Search/Sort_Paging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Wishlist_Compare_RecentView/Wishlist_Compare_RecentView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Wishlist_Compare_RecentView/Wishlist_Compare_RecentView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Run.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +46,9 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/pageUI/CheckOutPageUI.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/test/java/Order/Order.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -73,18 +67,19 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Automation/nopCommerce/src/main/java/utilities/DataDrivenTesting&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Automation/07- Cloud Testing/testng-browserstack-master&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/Automation/nopCommerce/src/main/java/org/example/Main.java&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Automation\nopCommerce\src\main\java\utilities\DataDrivenTesting" />
       <recent name="D:\Automation\nopCommerce" />
+      <recent name="D:\Automation\nopCommerce\src\main\java\utilities\DataDrivenTesting" />
       <recent name="D:\Automation\nopCommerce\src\test" />
       <recent name="D:\Automation\nopCommerce\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Automation\nopCommerce\Cloud testing" />
       <recent name="D:\Automation\nopCommerce\src\main\java\utilities\DataDrivenTesting" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -95,7 +90,20 @@
       <recent name="Account" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/Automation/nopCommerce/src/test/resources/Run.xml">
+  <component name="RunManager" selected="TestNG.D:/Automation/register-ap-exam/src/test/resources/Run.xml">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="nopCommerce" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="nopCommerce" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Account.Customer_information" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="nopCommerce" />
       <extension name="coverage">
@@ -124,8 +132,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="D:/Automation/register-ap-exam/src/test/resources/Run.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="iig-register-ap-exam" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/Run.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Automation/register-ap-exam/src/test/resources/Run.xml" />
         <item itemvalue="TestNG.D:/Automation/nopCommerce/src/test/resources/Run.xml" />
         <item itemvalue="TestNG.Account.Customer_information" />
       </list>
@@ -244,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714644019751</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="refactor code to customize handling multiple server">
+      <option name="closed" value="true" />
+      <created>1715245757699</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715245757699</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +299,7 @@
     <MESSAGE value="17/4/2024" />
     <MESSAGE value="progress testcase 05 of order class" />
     <MESSAGE value="02052024" />
-    <option name="LAST_COMMIT_MESSAGE" value="02052024" />
+    <MESSAGE value="refactor code to customize handling multiple server" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code to customize handling multiple server" />
   </component>
 </project>

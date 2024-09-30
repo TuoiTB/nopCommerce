@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="nopCommerce - UI Automation">
+<suite parallel="none" name="iig-register-ap-exam-ui-automation">
     <parameter name="server" value="test"/>
 
     <listeners>
@@ -8,7 +8,7 @@
         <listener class-name="reportConfig.AllureTestListener"/>
     </listeners>
 
-    <test name="Run on Chrome" preserve-order="true">
+    <test name="Run on Chrome - Window 11" preserve-order="true">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class
@@ -29,5 +29,12 @@
                     name="Order.Order"/>-->
         </classes>
     </test>
+    <!--<test name="Run on Firefox - Window 11" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class
+                    name="Register.Register_01_Main_Flow"/>
+        </classes>
+    </test>-->
 
 </suite>

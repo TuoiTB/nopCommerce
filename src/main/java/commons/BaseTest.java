@@ -72,7 +72,7 @@ public class BaseTest {
                 serverName = "https://www.lazada.vn/";
                 break;
             case TEST:
-                serverName = "https://demo.nopcommerce.com/";
+                serverName = "https://online.iigvietnam.com/";
                 break;
             case STAGING:
                 serverName = "https://tiki.vn/";
