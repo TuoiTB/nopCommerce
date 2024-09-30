@@ -545,6 +545,6 @@ public class BasePage {
 	public Alert waitForAlertPresence(WebDriver driver) {
 		return new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.alertIsPresent());
 	}
-	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
-	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
+	private final long longTimeout = GlobalConstants.LONG_TIMEOUT;
+	private final long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 }
