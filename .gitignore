@@ -36,3 +36,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/allure-json
+/logs
+/.idea/
+/logs/
+/logs/Fixed.log
+/.idea/workspace.xml
+/logs/Fixed.log
+/logs/Random.30-09-2024_09-43-34.log
+/.idea
