@@ -450,6 +450,10 @@ public class BasePage {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", getElement(driver, locator));
 		sleepInSecond(3);
 	}
+	public void clickToElementByJS(WebDriver driver, String locator, String...restParams) {
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", getElement(driver, getDynamicLocator(locator, restParams)));
+		sleepInSecond(3);
+	}
 
 	public void scrollToElementOnTop(WebDriver driver, String locator) {
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", getElement(driver, locator));

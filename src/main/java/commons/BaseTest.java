@@ -69,16 +69,16 @@ public class BaseTest {
         ServerList server = ServerList.valueOf(serverName.toUpperCase());
         switch (server) {
             case DEV:
-                serverName = "https://www.lazada.vn/";
+                serverName = "";
                 break;
             case TEST:
-                serverName = "https://online.iigvietnam.com/";
+                serverName = "https://online.iigvietnam.com/en";
                 break;
             case STAGING:
-                serverName = "https://tiki.vn/";
+                serverName = "";
                 break;
             case LIVE:
-                serverName = "https://shopee.vn/";
+                serverName = "";
                 break;
             default:
                 throw new IllegalArgumentException("Unexpected value: " + serverName);
@@ -86,15 +86,20 @@ public class BaseTest {
         return serverName;
     }
 
-
-    protected String getEmailRandom() {
-        Random rand = new Random();
-        return "automation" + rand.nextInt(9999) + "@gmail.com";
+    protected static String generateRandomEmail() {
+        String prefix = "auto-ui-";
+        String domain = "@yopmail.com";
+        int randomNum = new Random().nextInt(9999); // Random số từ 0 đến 9999
+        return prefix + randomNum + domain;
     }
-
     protected int getNumberRandom() {
         Random rand = new Random();
         return rand.nextInt(9999);
+    }
+    protected String getPhoneNumberRandom() {
+        Random rand = new Random();
+        int randomThreeDigits = rand.nextInt(1000); // Tạo số nguyên từ 0 đến 999
+        return "0962065" + String.format("%03d", randomThreeDigits);
     }
 
     protected void quitBrowserDriver() {

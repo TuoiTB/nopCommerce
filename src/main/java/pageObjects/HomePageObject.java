@@ -10,12 +10,12 @@ public class HomePageObject extends BasePage {
     public HomePageObject(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickToRegisterLink(){
-        waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
-        clickToElement(driver, HomePageUI.REGISTER_LINK);
+    public void clickToCreateAccountButton(){
+        waitForElementClickable(driver, HomePageUI.CREATE_ACCOUNT_BUTTON);
+        clickToElement(driver, HomePageUI.CREATE_ACCOUNT_BUTTON);
     }
-    public void clickToLoginLink(){
-        waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
-        clickToElement(driver, HomePageUI.LOGIN_LINK);
+    public void clickToLoginButton(){
+        waitForElementClickable(driver, HomePageUI.LOGIN_BUTTON);
+        clickToElement(driver, HomePageUI.LOGIN_BUTTON);
     }
 }

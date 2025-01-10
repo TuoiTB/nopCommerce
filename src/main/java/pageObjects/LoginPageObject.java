@@ -20,6 +20,9 @@ public class LoginPageObject extends BasePage {
         waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
         clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
     }
+    public boolean isEmailHaveNotVerifiedMessage() {
+        return isElementDisplayed(driver, LoginPageUI.EMAIL_NOT_VERIFIED_MESSAGE);
+    }
 
     public void inputToEmail(String valueToSend) {
         waitForElementVisible(driver,LoginPageUI.EMAIL_TEXTBOX);
