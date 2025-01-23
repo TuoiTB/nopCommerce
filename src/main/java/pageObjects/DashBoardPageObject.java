@@ -13,6 +13,9 @@ public class DashBoardPageObject extends BasePage {
     public boolean isLoginSuccessfully(){
         return isElementDisplayed(driver, DashBoardPageUI.MY_ACCOUNT_LINK);
     }
+    public String getTextAccount(){
+        return getElementText(driver, DashBoardPageUI.MY_ACCOUNT_LINK);
+    }
     public void clickMyAccount(){
         waitForElementClickable(driver, DashBoardPageUI.MY_ACCOUNT_LINK);
         clickToElement(driver, DashBoardPageUI.MY_ACCOUNT_LINK);

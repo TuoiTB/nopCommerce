@@ -3,7 +3,7 @@ package pageUI;
 import org.openqa.selenium.WebElement;
 
 public class DashBoardPageUI {
-    public static final String MY_ACCOUNT_LINK = "css=a.ico-account";
+    public static final String MY_ACCOUNT_LINK = "xpath=//a[@class='header-nav-features-toggle user-name']";
     public static final String PRODUCT_LINK = "XPATH=//strong[text()='Featured products']/parent::div/following-sibling::div//a[text()='Apple MacBook Pro 13-inch']";
     public static final String DYNAMIC_PRODUCT_LINK_BY_NAME = "XPATH=//h2[@class='product-title']/a[text()='%s']";
     public static final String PRODUCT_LINK_IN_WISHLIST = "XPATH=//h1[text()='Wishlist']/parent::div/following-sibling::div//a[text()='Apple MacBook Pro 13-inch']";
