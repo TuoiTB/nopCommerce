@@ -63,6 +63,7 @@ public class SignUpFlowTest extends BaseTest {
         log.info("Step 02: Switch to homepage");
         yopmailPage.openUrl(driver, productLink);
         homePage = PageGeneratorManager.getHomePage(driver);
+        homePage.sleepInSecond(3);
         homePage.clickToCreateAccountButton();
         signUpPage = PageGeneratorManager.getSignUpPage(driver);
 
@@ -106,7 +107,6 @@ public class SignUpFlowTest extends BaseTest {
 
         log.info("Step 14: Verify current url");
         verifyEquals(yopmailPage.getPageUrl(driver), product);
-        //verifyEquals(yopmailPage.getPageUrl(driver), "https://topik.iigvietnam.com/registration/lichthi");
         System.out.println(yopmailPage.getPageUrl(driver));
         System.out.println(randomEmail);
 
@@ -116,6 +116,7 @@ public class SignUpFlowTest extends BaseTest {
         log.info("Step 01: Click Login Link");
         loginPage = PageGeneratorManager.getLoginPage(driver);
         loginPage.openUrl(driver, productLink);
+        loginPage.sleepInSecond(3);
         loginPage.clickToLoginLink();
         log.info("Step 02: Input to Email");
         loginPage.inputToEmail(email);
@@ -161,6 +162,6 @@ public class SignUpFlowTest extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        //quitBrowserDriver();
+        quitBrowserDriver();
     }
 }

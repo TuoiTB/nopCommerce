@@ -1,10 +1,5 @@
 package commons;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Random;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
@@ -17,6 +12,11 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Random;
 
 
 //import io.github.bonigarcia.wdm.WebDriverManager;

@@ -1,12 +1,12 @@
 package utilities;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 public class ExcelConfig {
     private Sheet currentSheet;
     private String testDataExcelPath = "D:\\Automation\\nopCommerce\\src\\main\\java\\utilities\\DataDrivenTesting\\userData.xlsx" ;
