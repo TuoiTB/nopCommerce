@@ -1,7 +1,5 @@
 package pageUI;
 
-import org.openqa.selenium.WebElement;
-
 public class DashBoardPageUI {
     public static final String MY_ACCOUNT_LINK = "xpath=//a[@class='header-nav-features-toggle user-name']";
     public static final String PRODUCT_LINK = "XPATH=//strong[text()='Featured products']/parent::div/following-sibling::div//a[text()='Apple MacBook Pro 13-inch']";
