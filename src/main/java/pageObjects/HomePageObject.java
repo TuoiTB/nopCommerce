@@ -11,6 +11,7 @@ public class HomePageObject extends BasePage {
         this.driver = driver;
     }
     public void clickToCreateAccountButton(){
+
         waitForElementClickable(driver, HomePageUI.CREATE_ACCOUNT_BUTTON);
         clickToElement(driver, HomePageUI.CREATE_ACCOUNT_BUTTON);
     }

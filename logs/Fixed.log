@@ -1,0 +1,9 @@
+[09-02-2025 09:56:57.252 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 09:58:15.898 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 09:58:19.717 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 09:58:21.927 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 09:58:26.940 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 09:58:29.373 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 09:58:34.479 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 09:58:38.987 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 09:58:42.104 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
