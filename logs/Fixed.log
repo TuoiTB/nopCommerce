@@ -1,9 +1,59 @@
-[09-02-2025 09:56:57.252 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
-[09-02-2025 09:58:15.898 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
-[09-02-2025 09:58:19.717 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
-[09-02-2025 09:58:21.927 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
-[09-02-2025 09:58:26.940 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
-[09-02-2025 09:58:29.373 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
-[09-02-2025 09:58:34.479 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
-[09-02-2025 09:58:38.987 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
-[09-02-2025 09:58:42.104 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 10:49:01.747 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 10:49:10.070 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 10:49:17.040 INFO SignUp.SignUpFlowTest] - Step 03: Input to Email
+[09-02-2025 10:49:17.628 INFO SignUp.SignUpFlowTest] - Step 04: Input to Full Name
+[09-02-2025 10:49:17.702 INFO SignUp.SignUpFlowTest] - Step 05: Input to phone number
+[09-02-2025 10:49:17.759 INFO SignUp.SignUpFlowTest] - Step 06: Input to Password
+[09-02-2025 10:49:17.816 INFO SignUp.SignUpFlowTest] - Step 07: Input to Confirm Password
+[09-02-2025 10:49:17.875 INFO SignUp.SignUpFlowTest] - Step 08: Click to Register button
+[09-02-2025 10:49:17.931 INFO SignUp.SignUpFlowTest] - Step 09: Verify message register successfully
+[09-02-2025 10:49:18.573 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:49:18.573 INFO SignUp.SignUpFlowTest] - Step 10: Switch to yopmail
+[09-02-2025 10:49:19.676 INFO SignUp.SignUpFlowTest] - Step 11: Click to refresh button
+[09-02-2025 10:49:27.502 INFO SignUp.SignUpFlowTest] - Step 12: Click to confirm account button
+[09-02-2025 10:49:39.682 INFO SignUp.SignUpFlowTest] - Step 13: Switch window tab
+[09-02-2025 10:49:39.707 INFO SignUp.SignUpFlowTest] - Step 14: Verify current url
+[09-02-2025 10:49:39.711 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:49:39.767 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 10:49:42.867 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 10:49:49.825 INFO SignUp.SignUpFlowTest] - Step 03: Input to Email
+[09-02-2025 10:49:50.432 INFO SignUp.SignUpFlowTest] - Step 04: Input to Full Name
+[09-02-2025 10:49:50.498 INFO SignUp.SignUpFlowTest] - Step 05: Input to phone number
+[09-02-2025 10:49:50.553 INFO SignUp.SignUpFlowTest] - Step 06: Input to Password
+[09-02-2025 10:49:50.607 INFO SignUp.SignUpFlowTest] - Step 07: Input to Confirm Password
+[09-02-2025 10:49:50.668 INFO SignUp.SignUpFlowTest] - Step 08: Click to Register button
+[09-02-2025 10:49:50.722 INFO SignUp.SignUpFlowTest] - Step 09: Verify message register successfully
+[09-02-2025 10:49:51.233 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:49:51.234 INFO SignUp.SignUpFlowTest] - Step 10: Switch to yopmail
+[09-02-2025 10:49:51.503 INFO SignUp.SignUpFlowTest] - Step 11: Click to refresh button
+[09-02-2025 10:49:57.761 INFO SignUp.SignUpFlowTest] - Step 12: Click to confirm account button
+[09-02-2025 10:50:09.938 INFO SignUp.SignUpFlowTest] - Step 13: Switch window tab
+[09-02-2025 10:50:10.005 INFO SignUp.SignUpFlowTest] - Step 14: Verify current url
+[09-02-2025 10:50:10.010 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:50:10.018 INFO SignUp.SignUpFlowTest] - Step 01: Get email in yopmail
+[09-02-2025 10:50:13.553 INFO SignUp.SignUpFlowTest] - Step 02: Switch to homepage
+[09-02-2025 10:50:20.518 INFO SignUp.SignUpFlowTest] - Step 03: Input to Email
+[09-02-2025 10:50:21.126 INFO SignUp.SignUpFlowTest] - Step 04: Input to Full Name
+[09-02-2025 10:50:21.187 INFO SignUp.SignUpFlowTest] - Step 05: Input to phone number
+[09-02-2025 10:50:21.240 INFO SignUp.SignUpFlowTest] - Step 06: Input to Password
+[09-02-2025 10:50:21.295 INFO SignUp.SignUpFlowTest] - Step 07: Input to Confirm Password
+[09-02-2025 10:50:21.351 INFO SignUp.SignUpFlowTest] - Step 08: Click to Register button
+[09-02-2025 10:50:21.408 INFO SignUp.SignUpFlowTest] - Step 09: Verify message register successfully
+[09-02-2025 10:50:21.988 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:50:21.988 INFO SignUp.SignUpFlowTest] - Step 10: Switch to yopmail
+[09-02-2025 10:50:22.690 INFO SignUp.SignUpFlowTest] - Step 11: Click to refresh button
+[09-02-2025 10:50:28.351 INFO SignUp.SignUpFlowTest] - Step 12: Click to confirm account button
+[09-02-2025 10:50:40.520 INFO SignUp.SignUpFlowTest] - Step 13: Switch window tab
+[09-02-2025 10:50:40.584 INFO SignUp.SignUpFlowTest] - Step 14: Verify current url
+[09-02-2025 10:50:40.587 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:50:40.594 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 10:50:47.597 INFO SignUp.SignUpFlowTest] - Step 02: Input to Email
+[09-02-2025 10:50:48.207 INFO SignUp.SignUpFlowTest] - Step 03: Input to Password
+[09-02-2025 10:50:48.270 INFO SignUp.SignUpFlowTest] - Step 04: Click Login Button
+[09-02-2025 10:50:48.317 INFO SignUp.SignUpFlowTest] - Step 05: Verify login successfully
+[09-02-2025 10:50:48.938 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:50:48.952 INFO SignUp.SignUpFlowTest] - ----------PASSED----------
+[09-02-2025 10:50:48.955 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 10:51:26.132 INFO SignUp.SignUpFlowTest] - Step 01: Click Login Link
+[09-02-2025 10:52:03.384 INFO SignUp.SignUpFlowTest] - OS name = d:\2-tuoitb\at_ui\2-projects\iig-toeic-test\nopcommerce
+[09-02-2025 10:52:03.385 INFO SignUp.SignUpFlowTest] - Driver instance name = chromedriver: chrome on windows (6f6f42be7afe754099b1ce70ab1be434)

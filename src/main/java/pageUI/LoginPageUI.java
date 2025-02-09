@@ -8,4 +8,5 @@ public class LoginPageUI {
     public final static String EMAIL_NOT_VERIFIED_MESSAGE = "xpath=//button[@id='ResendVerifiedCode']/parent::div";
     public final static String EMAIL_ERROR_MESSAGE = "css=span#Email-error";
     public final static String ERROR_LOGIN_MESSAGE = "XPATH=//div[@class='message-error validation-summary-errors']";
+    public static final String POPUP_TOPIK = "xpath=//button[@class='btn-close' and @data-bs-dismiss='modal']";
 }
