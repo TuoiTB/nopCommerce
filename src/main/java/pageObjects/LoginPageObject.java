@@ -13,13 +13,13 @@ public class LoginPageObject extends BasePage {
 
     public void clickToLoginLink() {
         if (isElementDisplayed(driver, LoginPageUI.POPUP_TOPIK)) {
-            sleepInSecond(3);
             waitForElementClickable(driver, LoginPageUI.POPUP_TOPIK);
             clickToElement(driver, LoginPageUI.POPUP_TOPIK);
             waitForElementInvisible(driver, LoginPageUI.POPUP_TOPIK);
+        } else {
+            waitForElementClickable(driver, LoginPageUI.LOGIN_LINK);
+            clickToElement(driver, LoginPageUI.LOGIN_LINK);
         }
-        waitForElementClickable(driver, LoginPageUI.LOGIN_LINK);
-        clickToElement(driver, LoginPageUI.LOGIN_LINK);
     }
 
     public void clickToLoginButton() {
