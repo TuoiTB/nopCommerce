@@ -64,7 +64,8 @@ public class SignUpFlowTest extends BaseTest {
         yopmailPage.openUrl(driver, productLink);
         homePage = PageGeneratorManager.getHomePage(driver);
         homePage.sleepInSecond(3);
-        homePage.clickToCreateAccountButton();
+        //homePage.clickToCreateAccountButton();
+        homePage.clickToCreateAccountButton_trycatch();
         signUpPage = PageGeneratorManager.getSignUpPage(driver);
 
         log.info("Step 03: Input to Email");
